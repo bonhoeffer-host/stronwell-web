@@ -1,0 +1,165 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Agricultural Equipment",
+      "image": "/home-products/agricultural.jpg",
+      "category": "agricultural",
+      "link": "/products/agricultural"
+    },
+    {
+      "id": 2,
+      "title": "Back Pack Sprayer",
+      "image": "/home-products/back-pack-sprayer.png",
+      "category": "sprayers",
+      "link": "/products/sprayers"
+    },
+    {
+      "id": 3,
+      "title": "Blower",
+      "image": "/home-products/blower.png",
+      "category": "blowers",
+      "link": "/products/blowers"
+    },
+    {
+      "id": 4,
+      "title": "Brush Cutter",
+      "image": "/home-products/brush-cutter.png",
+      "category": "cutting-tools",
+      "link": "/products/cutting-tools"
+    },
+    {
+      "id": 5,
+      "title": "Chain Saw",
+      "image": "/home-products/chain-saw.png",
+      "category": "cutting-tools",
+      "link": "/products/cutting-tools"
+    },
+    {
+      "id": 6,
+      "title": "Cleaning Equipment",
+      "image": "/home-products/cleaning.png",
+      "category": "cleaning",
+      "link": "/products/cleaning"
+    },
+    {
+      "id": 7,
+      "title": "Earth Auger",
+      "image": "/home-products/earth-auger.png",
+      "category": "construction",
+      "link": "/products/construction"
+    },
+    {
+      "id": 8,
+      "title": "Engine Motor",
+      "image": "/home-products/engine-motor.png",
+      "category": "engines",
+      "link": "/products/engines"
+    },
+    {
+      "id": 9,
+      "title": "Forest & Garden Tools",
+      "image": "/home-products/f-g-forestry-garden.png",
+      "category": "garden-tools",
+      "link": "/products/garden-tools"
+    },
+    {
+      "id": 10,
+      "title": "Generator",
+      "image": "/home-products/generator.png",
+      "category": "power-equipment",
+      "link": "/products/power-equipment"
+    },
+    {
+      "id": 11,
+      "title": "Hedge Trimmer",
+      "image": "/home-products/hedge-trimmer.png",
+      "category": "garden-tools",
+      "link": "/products/garden-tools"
+    },
+    {
+      "id": 12,
+      "title": "Lawn Mowers",
+      "image": "/home-products/lawn-mowers.png",
+      "category": "lawn-care",
+      "link": "/products/lawn-care"
+    },
+    {
+      "id": 13,
+      "title": "Manual Seed Spreader",
+      "image": "/home-products/manual-seed-spreader.png",
+      "category": "agricultural",
+      "link": "/products/agricultural"
+    },
+    {
+      "id": 14,
+      "title": "Marine Equipment",
+      "image": "/home-products/marine.png",
+      "category": "marine",
+      "link": "/products/marine"
+    },
+    {
+      "id": 15,
+      "title": "Mowers",
+      "image": "/home-products/mowers.png",
+      "category": "lawn-care",
+      "link": "/products/lawn-care"
+    },
+    {
+      "id": 16,
+      "title": "Outboard Motor",
+      "image": "/home-products/outboard-motor.png",
+      "category": "marine",
+      "link": "/products/marine"
+    },
+    {
+      "id": 17,
+      "title": "Pole Pruner",
+      "image": "/home-products/pole-prunner.png",
+      "category": "garden-tools",
+      "link": "/products/garden-tools"
+    },
+    {
+      "id": 18,
+      "title": "Power Tools",
+      "image": "/home-products/power.png",
+      "category": "power-tools",
+      "link": "/products/power-tools"
+    },
+    {
+      "id": 19,
+      "title": "Pressure Washer",
+      "image": "/home-products/pressure-washer.png",
+      "category": "cleaning",
+      "link": "/products/cleaning"
+    },
+    {
+      "id": 20,
+      "title": "Sprayer Pump",
+      "image": "/home-products/sprayer-pump.png",
+      "category": "sprayers",
+      "link": "/products/sprayers"
+    },
+    {
+      "id": 21,
+      "title": "Tiller",
+      "image": "/home-products/tiller.png",
+      "category": "agricultural",
+      "link": "/products/agricultural"
+    },
+    {
+      "id": 22,
+      "title": "Vacuum Blower",
+      "image": "/home-products/vacuum-blower.png",
+      "category": "blowers",
+      "link": "/products/blowers"
+    },
+    {
+      "id": 23,
+      "title": "Water Pump",
+      "image": "/home-products/water-pump.png",
+      "category": "pumps",
+      "link": "/products/pumps"
+    }
+  ]
+}
