@@ -167,7 +167,7 @@ function ModelPage() {
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">Product Not Found</h1>
-            <p className="text-gray-300 mb-8">The product you're looking for doesn't exist.</p>
+            <p className="text-gray-300 mb-8">The product you&apos;re looking for doesn&apos;t exist.</p>
             <Link href="/products">
               <button className="px-6 py-3 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] text-white font-bold rounded-xl">
                 Back to Products
@@ -366,7 +366,7 @@ function ModelPage() {
               </div>
               {searchTerm && (
                 <div className="text-sm text-gray-400 mt-2">
-                  Showing models matching "{searchTerm}"
+                  Showing models matching &quot;{searchTerm}&quot;
                 </div>
               )}
             </div>
