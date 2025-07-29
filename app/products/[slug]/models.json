@@ -1,6 +1,6 @@
 [
   {
-    "category": "f-g-forestry-garden",
+    "category": "forestry-and-gardening",
     "product": "brush-cutter",
     "image": "1.png",
     "sharedDescription": [
@@ -37,7 +37,7 @@
     ]
   },
   {
-    "category": "f-g-forestry-garden",
+    "category": "forestry-and-gardening",
     "product": "brush-cutter",
     "image": "2.png",
     "sharedDescription": [
@@ -105,7 +105,7 @@
     ]
   },
   {
-    "category": "f-g-forestry-garden",
+    "category": "forestry-and-gardening",
     "product": "brush-cutter",
     "image": "3.png",
     "sharedDescription": [
@@ -131,7 +131,7 @@
     ]
   },
   {
-    "category": "f-g-forestry-garden",
+    "category": "forestry-and-gardening",
     "product": "brush-cutter",
     "image": "4.png",
     "sharedDescription": [
@@ -156,8 +156,8 @@
     ]
   },
   {
-    "category": "f-g-forestry-garden",
-    "product": "chain-saw",
+    "category": "forestry-and-gardening",
+    "product": "chainsaw",
     "image": "5.png",
     "sharedDescription": [
       " Lubricación de cadena automática ajustable",
@@ -213,8 +213,8 @@
     ]
   },
   {
-    "category": "f-g-forestry-garden",
-    "product": "chain-saw",
+    "category": "forestry-and-gardening",
+    "product": "chainsaw",
     "image": "6.png",
     "sharedDescription": [
       " Lubricación de cadena automática ajustable",
@@ -233,7 +233,7 @@
     ]
   },
   {
-    "category": "f-g-forestry-garden",
+    "category": "forestry-and-gardening",
     "product": "blower",
     "image": "7.png",
     "sharedDescription": [
@@ -256,7 +256,7 @@
     ]
   },
   {
-    "category": "f-g-forestry-garden",
+    "category": "forestry-and-gardening",
     "product": "blower",
     "image": "8.png",
     "sharedDescription": [
@@ -286,7 +286,7 @@
     ]
   },
   {
-    "category": "f-g-forestry-garden",
+    "category": "forestry-and-gardening",
     "product": "vacuum-blower",
     "image": "9.png",
     "sharedDescription": [
@@ -310,8 +310,8 @@
     ]
   },
   {
-    "category": "f-g-forestry-garden",
-    "product": "back-pack-sprayer",
+    "category": "forestry-and-gardening",
+    "product": "sprayer",
     "image": "10.png",
     "sharedDescription": [
       "Con regulación de presión de salida - práctica y precisa",
@@ -363,7 +363,7 @@
     ]
   },
   {
-    "category": "f-g-forestry-garden",
+    "category": "forestry-and-gardening",
     "product": "back-pack-sprayer",
     "image": "11.png",
     "sharedDescription": [
@@ -384,7 +384,7 @@
     ]
   },
   {
-    "category": "f-g-forestry-garden",
+    "category": "forestry-and-gardening",
     "product": "hedge-trimmer",
     "image": "12.png",
     "sharedDescription": [
@@ -404,8 +404,8 @@
     ]
   },
   {
-    "category": "f-g-forestry-garden",
-    "product": "pole-prunner",
+    "category": "forestry-and-gardening",
+    "product": "pole-pruner",
     "image": "13.png",
     "sharedDescription": [
       "Baja vibración - más comodidad para el usuario.",
@@ -431,8 +431,8 @@
     ]
   },
   {
-    "category": "f-g-forestry-garden",
-    "product": "electric-pole-prunner",
+    "category": "forestry-and-gardening",
+    "product": "pole-pruner",
     "image": "14.png",
     "sharedDescription": [
       "Baja vibración y ruido - más comodidad para el usuario.",
@@ -462,7 +462,7 @@
   },
    {
     "category": "mowers",
-    "product": "lawn-mowers",
+    "product": "lawn-mower",
     "image": "15.png",
     "sharedDescription": [
       "Fácil de operar, ideal para jardines pequeños a medianos",
@@ -493,7 +493,7 @@
   },
   {
     "category": "mowers",
-    "product": "lawn-mowers",
+    "product": "lawn-mower",
     "image": "16.png",
     "sharedDescription": [
       "Plataforma metálica de 20\" - Equilibrio ideal entre tamaño y productividad",
@@ -516,7 +516,7 @@
   },
   {
     "category": "mowers",
-    "product": "lawn-mowers",
+    "product": "lawn-mower",
     "image": "17.png",
     "sharedDescription": [
       "Plataforma metálica de 21\" - Tamaño medio ideal",
