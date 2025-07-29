@@ -270,10 +270,9 @@ function AboutPage() {
         </div> */}
       </section>
 
-      {/* About Content Section */}
-      {/* <section className="py-5 lg:py-10 px-6 lg:px-8">
+      {/* Where We Come From Section */}
+      <section className="py-5 lg:py-10 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -282,74 +281,35 @@ function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Journey</span>
+              Where We <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Come From</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full mb-6" />
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              From humble beginnings to global leadership - the story of innovation, perseverance, and excellence.
-            </p>
           </motion.div>
 
-          <div className="relative">
-            <div className="absolute left-4 lg:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#ff4f01] to-[#ff6b2e] transform lg:-translate-x-0.5" />
-            
-            {[
-              {
-                year: "1999",
-                title: "Foundation",
-                description: "Started as a small workshop with a vision to revolutionize industrial equipment manufacturing.",
-                position: "left"
-              },
-              {
-                year: "2005",
-                title: "First Export",
-                description: "Expanded internationally, establishing our first export partnerships across Asia-Pacific region.",
-                position: "right"
-              },
-              {
-                year: "2012",
-                title: "ISO Certification",
-                description: "Achieved ISO 9001 certification, reinforcing our commitment to quality and excellence.",
-                position: "left"
-              },
-              {
-                year: "2018",
-                title: "Global Expansion",
-                description: "Reached 50+ countries worldwide with comprehensive product portfolio and service network.",
-                position: "right"
-              },
-              {
-                year: "2024",
-                title: "Innovation Hub",
-                description: "Launched advanced R&D facility focusing on sustainable and smart industrial solutions.",
-                position: "left"
-              }
-            ].map((milestone, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: milestone.position === "left" ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`relative flex ${milestone.position === "right" ? "lg:justify-end" : ""} mb-12`}
-              >
-                <div className={`lg:w-5/12 ${milestone.position === "right" ? "lg:text-right" : ""}`}>
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 ml-12 lg:ml-0">
-                    <div className="text-2xl font-bold text-[#ff4f01] mb-2">{milestone.year}</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{milestone.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{milestone.description}</p>
-                  </div>
-                </div>
-                
-                <div className="absolute left-4 lg:left-1/2 w-4 h-4 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] rounded-full transform lg:-translate-x-2 translate-y-6" />
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-7xl mx-auto"
+          >
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 lg:p-12">
+              <p className="text-lg lg:text-xl text-gray-300 leading-relaxed mb-6">
+                The idea for Stronwell came from real conversations with importers, technicians, and sellers — people tired of machines that failed too soon, cost too much, or arrived without support.
+              </p>
+              <p className="text-lg lg:text-xl text-gray-300 leading-relaxed mb-6">
+                The market was divided: premium machines with high investment, or cheap imports that couldn&apos;t withstand pressure. Stronwell was built to be the third way — machines that are reliable, affordable, and well-supported.
+              </p>
+              <p className="text-lg lg:text-xl text-gray-300 leading-relaxed">
+                We&apos;ve watched mechanics give up, dealers wait for parts, and users get frustrated. Stronwell is the answer: standardized specs, durable platforms, and real support.
+              </p>
+            </div>
+          </motion.div>
         </div>
-      </section> */}
+      </section>
 
-      {/* Leadership Team */}
-      {/* <section className="py-5 lg:py-10 px-6 lg:px-8">
+      {/* What We Believe Section */}
+      <section className="py-5 lg:py-10 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -359,38 +319,38 @@ function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Leadership <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Team</span>
+              What We <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Believe</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full mb-6" />
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Meet the visionaries driving innovation and excellence at Stronwell.
-            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {[
               {
-                name: "Dr. Michael Bonhoeffer",
-                position: "Chief Executive Officer",
-                experience: "25+ Years",
-                image: "/about/about-2.png",
-                description: "Visionary leader with expertise in industrial automation and global business strategy."
+                number: "1",
+                title: "Machines Should Never Be Disposable",
+                description: "Every Stronwell product is built for durability — with serviceability and simplicity in mind.",
+                icon: "⚙️"
               },
               {
-                name: "Sarah Chen",
-                position: "Chief Technology Officer",
-                experience: "20+ Years",
-                image: "/about/about-3.png",
-                description: "Innovation pioneer driving R&D initiatives and sustainable technology development."
+                number: "2",
+                title: "Trust is Earned After the Sale",
+                description: "From spare kits and manuals to real support, we show up when it matters most.",
+                icon: "🤝"
               },
               {
-                name: "James Rodriguez",
-                position: "Global Sales Director",
-                experience: "18+ Years",
-                image: "/about/about-4.png",
-                description: "Market expert expanding Stronwell&apos;s presence across international markets."
+                number: "3",
+                title: "Margins Must Work for Everyone",
+                description: "Our pricing supports importers, dealers, and the end users — all at once.",
+                icon: "💰"
+              },
+              {
+                number: "4",
+                title: "No Gimmicks, Just Real Value",
+                description: "We don't believe in overdesign, inflated pricing, or empty promises.",
+                icon: "✨"
               }
-            ].map((leader, index) => (
+            ].map((belief, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -399,31 +359,172 @@ function AboutPage() {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="group"
               >
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-[#ff4f01]/30 transition-all duration-300">
-                  <div className="relative h-64 overflow-hidden">
-                    <img 
-                      src={leader.image} 
-                      alt={leader.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    
-                    <div className="absolute top-4 right-4 px-3 py-1 bg-[#ff4f01] text-white text-sm font-bold rounded-full">
-                      {leader.experience}
+                <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-[#ff4f01]/30 transition-all duration-300">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 hidden bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] rounded-full sm:flex items-center justify-center text-white font-bold text-xl">
+                        {belief.number}
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-2">{leader.name}</h3>
-                    <div className="text-[#ff4f01] font-medium mb-4">{leader.position}</div>
-                    <p className="text-gray-300 text-sm leading-relaxed">{leader.description}</p>
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-3 mb-4">
+                        <span className="text-2xl hidden md:block">{belief.icon}</span>
+                        <h3 className="text-xl font-bold text-white">{belief.title}</h3>
+                      </div>
+                      <p className="text-gray-300 leading-relaxed">{belief.description}</p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
+
+      {/* Who We're For & What's Next Combined Section */}
+      <section className="py-5 lg:py-10 px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            {/* Who We're For */}
+            <div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="text-center mb-12"
+              >
+                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                  Who We&apos;re <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">For</span>
+                </h2>
+                <div className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full mb-6" />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                  <p className="text-lg lg:text-xl text-gray-300 leading-relaxed">
+                    We don&apos;t label by job titles. We build for people who keep things moving — who know how to compare specs, who don&apos;t fall for fluff, and who expect performance to last beyond a season.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* What's Next */}
+            <div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="text-center mb-12"
+              >
+                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                  What&apos;s <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Next</span>
+                </h2>
+                <div className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full mb-6" />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                  <p className="text-lg text-gray-300 leading-relaxed mb-4">
+                    We&apos;ll keep listening, refining, and improving.
+                  </p>
+                  <p className="text-lg text-gray-300 leading-relaxed mb-4">
+                    That means spec combinations tailored to your market, videos in your language, and support that works even offline.
+                  </p>
+                  <p className="text-lg text-gray-300 leading-relaxed">
+                    Because the best R&D lab is still the real world — and that&apos;s where Stronwell will always be tested.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leading Latin America Section */}
+      <section className="py-5 lg:py-10 px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Leading Latin America&apos;s <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Outdoor Power Equipment Group</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full mb-6" />
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Description */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                  Stronwell is powered by the same DNA as Bonhoeffer Machines — quality control, technical precision, and channel-first thinking.
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed mb-8">
+                  We&apos;ve reimagined that legacy in a more agile, accessible, and rotation-ready form.
+                </p>
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  Every number is backed by machines that start on time, parts that arrive on time, and partners that grow with confidence.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+              {[
+                { number: "21", label: "Countries Active", icon: "🌍" },
+                { number: "5.27M", label: "Million Machines Deployed", icon: "⚙️" },
+                { number: "47M", label: "$M Partner Revenue - Last 3 Yrs", icon: "💰" }
+              ].map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-[#ff4f01]/30 transition-all duration-300"
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="text-3xl">{stat.icon}</div>
+                    <div>
+                      <div className="text-3xl font-bold text-[#ff4f01] mb-1">{stat.number}</div>
+                      <div className="text-gray-300 font-medium">{stat.label}</div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* Global Presence */}
       <section className="py-5 lg:py-10 px-6 lg:px-8" id='global-presence'>
@@ -510,98 +611,7 @@ function AboutPage() {
       </section>
 
       {/* Innovation & Sustainability */}
-      <section className="py-5 lg:py-10 px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Innovation & <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Sustainability</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full mb-6" />
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Pioneering tomorrow&apos;s solutions while protecting our planet for future generations.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
-            {/* Innovation */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="relative">
-                <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] rounded-full opacity-20 blur-xl" />
-                <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                  <div className="w-16 h-16 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] rounded-2xl flex items-center justify-center mb-6">
-                    <span className="text-2xl">💡</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Innovation Lab</h3>
-                  <p className="text-gray-300 leading-relaxed mb-6">
-                    Our state-of-the-art R&D facility focuses on developing next-generation industrial solutions, 
-                    incorporating AI, IoT, and advanced materials to create smarter, more efficient equipment.
-                  </p>
-                  <ul className="space-y-2">
-                    {[
-                      "Smart Equipment Integration",
-                      "Advanced Material Research",
-                      "AI-Powered Diagnostics",
-                      "IoT Connectivity Solutions"
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <div className="w-2 h-2 bg-[#ff4f01] rounded-full mr-3" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Sustainability */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="relative">
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-20 blur-xl" />
-                <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
-                    <span className="text-2xl">🌱</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Green Initiative</h3>
-                  <p className="text-gray-300 leading-relaxed mb-6">
-                    Committed to environmental responsibility through sustainable manufacturing processes, 
-                    eco-friendly materials, and energy-efficient product designs that reduce our carbon footprint.
-                  </p>
-                  <ul className="space-y-2">
-                    {[
-                      "Carbon Neutral Manufacturing",
-                      "Recyclable Material Usage",
-                      "Energy Efficient Designs",
-                      "Waste Reduction Programs"
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <div className="w-2 h-2 bg-green-500 rounded-full mr-3" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+            {/* Global Presence */}
 
       {/* Final CTA Section */}
       <section className="py-5 lg:py-10 px-6 lg:px-8">
@@ -624,7 +634,7 @@ function AboutPage() {
 
             <div className="relative z-10">
               <h3 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Partner with Excellence?
+                Ready to Partner with <span className="text-[#ff4f01]">Excellence?</span>
               </h3>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Join the Stronwell family and experience the difference that quality, 
