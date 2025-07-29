@@ -141,7 +141,7 @@ function About() {
             className="text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed"
           >
             Pioneering excellence in industrial solutions for over two decades, 
-            we've been the trusted partner for businesses worldwide.
+            we&apos;ve been the trusted partner for businesses worldwide.
           </motion.p>
         </motion.div>
 
@@ -172,7 +172,7 @@ function About() {
                 </p>
                 <p>
                   Through continuous innovation, strategic partnerships, and an unwavering 
-                  commitment to quality, we've built a reputation that spans continents 
+                  commitment to quality, we&apos;ve built a reputation that spans continents 
                   and serves diverse industries worldwide.
                 </p>
               </div>

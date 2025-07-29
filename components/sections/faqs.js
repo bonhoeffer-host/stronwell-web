@@ -20,7 +20,7 @@ function Faqs() {
     {
       id: 3,
       question: "How can I become a distributor for Stronwell products?",
-      answer: <p>We welcome partnership opportunities with qualified distributors worldwide. To become a Stronwell distributor, you'll need to meet certain criteria including market presence, technical expertise, and service capabilities. Please contact our partnership team through our <Link href={'/dealer'} className='text-[#ff4f01] font-bold hover:underline'>Become Distributor</Link> page for detailed requirements and application process.</p>
+      answer: <p>We welcome partnership opportunities with qualified distributors worldwide. To become a Stronwell distributor, you&apos;ll need to meet certain criteria including market presence, technical expertise, and service capabilities. Please contact our partnership team through our <Link href={'/dealer'} className='text-[#ff4f01] font-bold hover:underline'>Become Distributor</Link> page for detailed requirements and application process.</p>
     },
     // {
     //   id: 4,
@@ -138,7 +138,7 @@ function Faqs() {
           
           <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Find answers to common questions about our products, services, and partnerships. 
-            Can't find what you're looking for? Contact our support team.
+            Can&apos;t find what you&apos;re looking for? Contact our support team.
           </p>
         </motion.div>
 
