@@ -120,7 +120,7 @@ function AboutPage() {
           {/* Subtitle */}
           <motion.div variants={contentVariants} className="mb-12">
             <p className="text-xl md:text-2xl lg:text-3xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Pioneering industrial excellence through innovation, quality, and unwavering commitment to our customers' success.
+              Pioneering industrial excellence through innovation, quality, and unwavering commitment to our customers&apos; success.
             </p>
           </motion.div>
 
@@ -388,7 +388,7 @@ function AboutPage() {
                 position: "Global Sales Director",
                 experience: "18+ Years",
                 image: "/about/about-4.png",
-                description: "Market expert expanding Stronwell's presence across international markets."
+                description: "Market expert expanding Stronwell&apos;s presence across international markets."
               }
             ].map((leader, index) => (
               <motion.div
@@ -524,7 +524,7 @@ function AboutPage() {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full mb-6" />
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Pioneering tomorrow's solutions while protecting our planet for future generations.
+              Pioneering tomorrow&apos;s solutions while protecting our planet for future generations.
             </p>
           </motion.div>
 
