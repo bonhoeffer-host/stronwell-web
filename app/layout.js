@@ -55,12 +55,12 @@ export default function RootLayout({ children }) {
         ></div>
 
         {/* Skip to main content for accessibility */}
-        <a 
+        {/* <a 
           href="#main-content" 
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#ff4f01] text-white px-4 py-2 rounded-lg z-[9999] font-medium transition-all duration-200"
         >
           Skip to main content
-        </a>
+        </a> */}
 
         {/* Main app content */}
         <div className="relative min-h-screen flex flex-col">

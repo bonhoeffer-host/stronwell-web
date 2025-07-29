@@ -113,14 +113,13 @@ function House() {
           />
           
           <motion.p 
-            className="text-lg lg:text-xl text-gray-100 max-w-3xl mx-auto mt-6 leading-relaxed"
+            className="text-lg lg:text-xl text-gray-100 max-w-5xl mx-auto mt-6 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Discover our family of brands, each specializing in delivering excellence 
-            across different market segments while maintaining our core values of quality and innovation.
+            From Mechnova&apos;s light-duty machines to Bonhoeffer&apos;s heavy-duty powerhouses, each brand serves a distinct user. Stronwell supports everyday pros, while Stevron delivers precise, reliable tools. United by shared values, all are built to solve real challenges—because Bonhoeffer users expect nothing less.
           </motion.p>
         </motion.div>
 
