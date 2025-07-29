@@ -113,7 +113,7 @@ function Faqs() {
   }
 
   return (
-    <section className="py-5 lg:py-10 px-6 lg:px-8">
+    <section className="py-5 lg:py-10 px-6 lg:px-8" id='faqs'>
       <div className="max-w-4xl mx-auto">
         
         {/* Section Header */}

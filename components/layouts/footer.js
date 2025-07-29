@@ -13,19 +13,20 @@ function Footer() {
       title: "Company",
       links: [
         { name: "About Us", href: "/about" },
-        { name: "Our Mission", href: "/about#mission" },
+        { name: "Our Story", href: "/#our-story" },
         // { name: "Our Vision", href: "/about#vision" },
         // { name: "Our Values", href: "/about#values" },
-        { name: "Careers", href: "https://bonhoeffer.in/careers" },
+        // { name: "Careers", href: "https://bonhoeffer.in/careers" },
+        { name: "FAQs", href: "/#faqs" },
         // { name: "News & Press", href: "/news" }
       ]
     },
     {
       title: "Products",
       links: [
-        { name: "Power Tools", href: "/products/power-tools" },
-        { name: "Hand Tools", href: "/products/hand-tools" },
-        { name: "Outdoor Equipment", href: "/products/outdoor" },
+        { name: "Our Products", href: "/products" },
+        { name: "Brush Cutter", href: "/products/brush-cutter" },
+        { name: "Chainsaw", href: "/products/chainsaw" },
         // { name: "Accessories", href: "/products/accessories" }
       ]
     },
