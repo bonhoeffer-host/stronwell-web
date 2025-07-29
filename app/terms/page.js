@@ -191,7 +191,7 @@ function TermsPage() {
             </h2>
             <div className="prose prose-invert max-w-none">
               <p className="text-gray-300 leading-relaxed mb-4">
-                Welcome to Stronwell Machines. These Terms and Conditions ("Terms") govern your use of our website, 
+                Welcome to Stronwell Machines. These Terms and Conditions (&quot;Terms&quot;) govern your use of our website, 
                 products, and services. By accessing or using our services, you agree to be bound by these Terms.
               </p>
               <p className="text-gray-300 leading-relaxed">

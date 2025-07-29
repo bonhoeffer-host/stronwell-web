@@ -351,7 +351,7 @@ function PrivacyPage() {
             </div>
             <p className="text-gray-300 leading-relaxed">
               We are committed to maintaining the highest standards of data protection and privacy. 
-              If you have any concerns about how your information is handled, please don't hesitate to contact us.
+              If you have any concerns about how your information is handled, please don&apos;t hesitate to contact us.
             </p>
           </motion.div>
         </div>
