@@ -8,7 +8,7 @@ function House() {
     {
       id: 1,
       name: 'Bonhoeffer Machines',
-      description: 'Parent Company',
+      description: 'Intensive Use',
       website: 'https://bonhoeffermachines.com',
       logo: '/logos/bonhoeffer_logo.png', // You'll need to add this logo
       tagline: 'Industrial Excellence & Innovation'
@@ -16,7 +16,7 @@ function House() {
     {
       id: 2,
       name: 'Mechnova Machines',
-      description: 'Affordable Products',
+      description: 'Occasionally Use',
       website: 'https://mechnovamachines.com',
       logo: '/logos/mechnova_logo.png', // You'll need to add this logo
       tagline: 'Quality Solutions for Everyone'
