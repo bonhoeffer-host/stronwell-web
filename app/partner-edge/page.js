@@ -313,7 +313,8 @@ function PartnerPage() {
                 className="group"
               >
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full hover:border-[#ff4f01]/30 transition-all duration-300">
-                  <div className="text-3xl mb-4">{item.icon}</div>
+                  {/* <span className="text-3xl mb-4 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] rounded-full px-4 py-2">{index + 1}</span> */}
+                  <div className="text-3xl mb-4 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] rounded-full px-4 py-2 text-white font-bold w-12 h-12 flex items-center justify-center">{index + 1}</div>
                   <h3 className="text-lg font-bold text-white mb-3">{item.challenge}</h3>
                   <p className="text-gray-300 leading-relaxed">{item.solution}</p>
                 </div>

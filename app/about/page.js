@@ -368,7 +368,7 @@ function AboutPage() {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-4">
-                        <span className="text-2xl hidden md:block">{belief.icon}</span>
+                        {/* <span className="text-2xl hidden md:block">{belief.icon}</span> */}
                         <h3 className="text-xl font-bold text-white">{belief.title}</h3>
                       </div>
                       <p className="text-gray-300 leading-relaxed">{belief.description}</p>
@@ -497,12 +497,12 @@ function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-6"
+              className="flex flex-col space-y-5 md:space-y-0 md:flex-row md:space-x-5"
             >
               {[
                 { number: "21", label: "Countries Active", icon: "🌍" },
                 { number: "5.27M", label: "Million Machines Deployed", icon: "⚙️" },
-                { number: "47M", label: "$M Partner Revenue - Last 3 Yrs", icon: "💰" }
+                { number: "$47M", label: "Partner Revenue - Last 3 Yrs", icon: "💰" }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -513,7 +513,7 @@ function AboutPage() {
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-[#ff4f01]/30 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-4">
-                    <div className="text-3xl">{stat.icon}</div>
+                    {/* <div className="text-3xl">{stat.icon}</div> */}
                     <div>
                       <div className="text-3xl font-bold text-[#ff4f01] mb-1">{stat.number}</div>
                       <div className="text-gray-300 font-medium">{stat.label}</div>
@@ -563,7 +563,7 @@ function AboutPage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-[#ff4f01]/30 transition-all duration-300"
                 >
-                  <div className="text-4xl mb-4">{stat.icon}</div>
+                  {/* <div className="text-4xl mb-4">{stat.icon}</div> */}
                   <div className="text-3xl font-bold text-[#ff4f01] mb-2">{stat.number}</div>
                   <div className="text-gray-300 font-medium">{stat.label}</div>
                 </motion.div>

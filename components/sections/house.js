@@ -119,7 +119,7 @@ function House() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            From Mechnova&apos;s light-duty machines to Bonhoeffer&apos;s heavy-duty powerhouses, each brand serves a distinct user. Stronwell supports everyday pros, while Stevron delivers precise, reliable tools. United by shared values, all are built to solve real challenges—because Bonhoeffer users expect nothing less.
+            From Mechnova&apos;s light-duty machines to Bonhoeffer&apos;s heavy-duty powerhouses, each brand serves a distinct user. Stronwell supports everyday pros, while Stevron delivers precise, reliable tools. United by shared values, all are built to solve real challenges - because Bonhoeffer users expect nothing less.
           </motion.p>
         </motion.div>
 

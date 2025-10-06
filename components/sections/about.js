@@ -183,11 +183,11 @@ function About() {
               variants={itemVariants}
               className="relative p-8 bg-gray-800 rounded-2xl border border-white/70"
             >
-              <div className="absolute top-4 left-4 w-12 h-12 bg-gradient-to-br from-[#ff4f01] to-[#ff6b2e] rounded-full flex items-center justify-center">
+              {/* <div className="absolute top-4 left-4 w-12 h-12 bg-gradient-to-br from-[#ff4f01] to-[#ff6b2e] rounded-full flex items-center justify-center">
                 <span className="text-white text-xl">🎯</span>
-              </div>
-              <div className="pl-16">
-                <h4 className="text-xl font-bold text-gray-100 mb-3">Our Mission</h4>
+              </div> */}
+              <div>
+                <h4 className="text-2xl font-bold text-gray-100 mb-3">Our <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Mission</span></h4>
                 <p className="text-gray-200 leading-relaxed">
                   To empower businesses and professionals with innovative, reliable, and 
                   sustainable industrial solutions that drive growth, efficiency, and success 
@@ -341,13 +341,13 @@ function About() {
                   
                   {/* Icon */}
                   <div className="relative z-10">
-                    <motion.div
+                    {/* <motion.div
                       className="w-16 h-16 bg-gray-700 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white transition-colors duration-300"
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.3 }}
                     >
                       <span className="text-2xl">{value.icon}</span>
-                    </motion.div>
+                    </motion.div> */}
                     
                     <h4 className="text-xl font-bold text-gray-100 mb-4 group-hover:text-[#ff4f01] transition-colors duration-300">
                       {value.title}
