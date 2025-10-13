@@ -294,7 +294,7 @@ function ModelPage() {
               {/* Common Features */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                  <span className="text-2xl mr-3">✨</span>
+                  {/* <span className="text-2xl mr-3">✨</span> */}
                   Key Features
                 </h3>
                 <ul className="space-y-2">

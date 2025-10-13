@@ -13,10 +13,6 @@ export default function Home() {
       <Products/>
       <About/>
       <Faqs/>
-      {/* <div className="h-screen"/>
-      <div className="h-screen"/>
-      <div className="h-screen"/>
-      <div className="h-screen"/> */}
     </BgLayout>
   );
 }

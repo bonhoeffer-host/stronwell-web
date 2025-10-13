@@ -165,7 +165,7 @@ function Products() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         
                         {/* Category Badge */}
-                        <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-gray-700">
+                        <div className="absolute top-4 left-4 px-3 py-1 bg-[#ff4f01] backdrop-blur-sm rounded-full text-xs font-medium text-gray-100">
                           {product.category.replace('-', ' ').toUpperCase()}
                         </div>
                         
@@ -221,7 +221,7 @@ function Products() {
               variants={buttonVariants}
               whileHover="hover"
               whileTap="tap"
-              className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] text-white font-bold text-lg rounded-xl shadow-2xl overflow-hidden"
+              className="group cursor-pointer relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] text-white font-bold text-lg rounded-xl shadow-2xl overflow-hidden"
             >
               {/* Button Background Effect */}
               <motion.div
