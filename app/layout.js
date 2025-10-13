@@ -50,17 +50,9 @@ export default function RootLayout({ children }) {
         {/* Scroll progress indicator */}
         <div 
           id="scroll-progress" 
-          className="fixed top-0 left-0 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] z-50 transition-all duration-150 ease-out"
+          className="hidden sm:block fixed top-19 left-0 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] z-50 transition-all duration-150 ease-out"
           style={{ width: '0%' }}
         ></div>
-
-        {/* Skip to main content for accessibility */}
-        {/* <a 
-          href="#main-content" 
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#ff4f01] text-white px-4 py-2 rounded-lg z-[9999] font-medium transition-all duration-200"
-        >
-          Skip to main content
-        </a> */}
 
         {/* Main app content */}
         <div className="relative min-h-screen flex flex-col">

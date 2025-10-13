@@ -58,10 +58,10 @@
     },
     {
       "id": 9,
-      "title": "Forest & Garden Tools",
-      "image": "/home-products/f-g-forestry-garden.png",
-      "category": "garden-tools",
-      "link": "/products/garden-tools"
+      "title": "Water Pump",
+      "image": "/home-products/water-pump.png",
+      "category": "pumps",
+      "link": "/products/pumps"
     },
     {
       "id": 10,
@@ -97,69 +97,6 @@
       "image": "/home-products/marine.png",
       "category": "marine",
       "link": "/products/marine"
-    },
-    {
-      "id": 15,
-      "title": "Mowers",
-      "image": "/home-products/mowers.png",
-      "category": "lawn-care",
-      "link": "/products/lawn-care"
-    },
-    {
-      "id": 16,
-      "title": "Outboard Motor",
-      "image": "/home-products/outboard-motor.png",
-      "category": "marine",
-      "link": "/products/marine"
-    },
-    {
-      "id": 17,
-      "title": "Pole Pruner",
-      "image": "/home-products/pole-prunner.png",
-      "category": "garden-tools",
-      "link": "/products/garden-tools"
-    },
-    {
-      "id": 18,
-      "title": "Power Tools",
-      "image": "/home-products/power.png",
-      "category": "power-tools",
-      "link": "/products/power-tools"
-    },
-    {
-      "id": 19,
-      "title": "Pressure Washer",
-      "image": "/home-products/pressure-washer.png",
-      "category": "cleaning",
-      "link": "/products/cleaning"
-    },
-    {
-      "id": 20,
-      "title": "Sprayer Pump",
-      "image": "/home-products/sprayer-pump.png",
-      "category": "sprayers",
-      "link": "/products/sprayers"
-    },
-    {
-      "id": 21,
-      "title": "Tiller",
-      "image": "/home-products/tiller.png",
-      "category": "agricultural",
-      "link": "/products/agricultural"
-    },
-    {
-      "id": 22,
-      "title": "Vacuum Blower",
-      "image": "/home-products/vacuum-blower.png",
-      "category": "blowers",
-      "link": "/products/blowers"
-    },
-    {
-      "id": 23,
-      "title": "Water Pump",
-      "image": "/home-products/water-pump.png",
-      "category": "pumps",
-      "link": "/products/pumps"
     }
   ]
 }

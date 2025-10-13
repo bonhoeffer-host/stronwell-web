@@ -148,7 +148,7 @@ function Header() {
                 <img 
                     src="/logo.png" 
                     alt="Stronwell Logo" 
-                    className="h-5 sm:h-8 rounded-xl shadow-lg"
+                    className="h-3 [@media(min-width:420px)]:h-5 shadow-lg"
                 />
                 {/* <motion.div
                     className="absolute -inset-1 bg-gradient-to-br from-[#ff4f01] to-[#ff6b2e] rounded-xl opacity-30 blur-sm"
@@ -313,7 +313,7 @@ function Header() {
               {/* Mobile Language Switcher - Dropdown */}
               <motion.button
                 onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                className="lg:hidden flex items-center cursor-pointer space-x-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl px-4 py-1 sm:py-2 text-white transition-all duration-300"
+                className="lg:hidden flex items-center cursor-pointer space-x-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl px-2 py-1 sm:py-2 text-white transition-all duration-300"
                 whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 79, 1, 0.1)" }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Language selector"
@@ -337,7 +337,7 @@ function Header() {
               <AnimatePresence>
                 {isLanguageOpen && (
                   <motion.div
-                    className="lg:hidden absolute top-full mt-3 right-0 bg-black/90 backdrop-blur-2xl border border-white/20 rounded-xl shadow-2xl min-w-[140px] overflow-hidden"
+                    className="lg:hidden absolute top-full mt-3 right-0 bg-black/90 backdrop-blur-2xl border border-white/20 rounded-xl shadow-2xl min-w-[10px] overflow-hidden"
                     variants={dropdownVariants}
                     initial="initial"
                     animate="animate"
@@ -352,7 +352,7 @@ function Header() {
                           setSelectedLanguage(lang.code)
                           setIsLanguageOpen(false)
                         }}
-                        className={`w-full text-left px-4 py-3 text-lg cursor-pointer transition-all duration-200 ${
+                        className={`w-15 text-left px-4 py-3 text-lg cursor-pointer transition-all duration-200 ${
                           selectedLanguage === lang.code
                             ? 'bg-[#ff4f01] text-white'
                             : 'text-white/80 hover:bg-white/10 hover:text-[#ff4f01]'
