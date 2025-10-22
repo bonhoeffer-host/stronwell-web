@@ -11,6 +11,7 @@ function ModelPage() {
   const slug = params.slug
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedImageGroup, setSelectedImageGroup] = useState(0)
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0)
   const [showQuoteModal, setShowQuoteModal] = useState(false)
   const [showThankYouModal, setShowThankYouModal] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -161,6 +162,29 @@ function ModelPage() {
     setShowQuoteModal(true)
   }
 
+  // Navigate to product image when model is clicked
+  const handleModelClick = (groupIndex, modelName) => {
+    setSelectedImageGroup(groupIndex)
+    
+    // Find the image index that matches the model name
+    const group = productData[groupIndex]
+    if (Array.isArray(group?.image) && modelName) {
+      // Find image where the filename (without extension) matches the model name
+      const imageIndex = group.image.findIndex(img => {
+        const imgNameWithoutExt = img.replace(/\.[^/.]+$/, '').toUpperCase()
+        return imgNameWithoutExt === modelName.toUpperCase()
+      })
+      
+      // Set to found index, or 0 if not found
+      setSelectedImageIndex(imageIndex >= 0 ? imageIndex : 0)
+    } else {
+      setSelectedImageIndex(0)
+    }
+    
+    // Scroll to the product header section smoothly
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   if (productData.length === 0) {
     return (
       <BgLayout>
@@ -221,37 +245,129 @@ function ModelPage() {
                 {/* Main Image */}
                 <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden">
                   <img
-                    src={`/products/${productData[selectedImageGroup]?.image}`}
+                    src={`/products/${
+                      Array.isArray(productData[selectedImageGroup]?.image)
+                        ? productData[selectedImageGroup]?.image[selectedImageIndex]
+                        : productData[selectedImageGroup]?.image
+                    }`}
                     alt={getProductTitle(slug)}
                     className="w-full object-cover"
                   />
                   
-                  {/* Category Badge */}
-                  <div className="absolute top-4 left-4 px-3 py-1 bg-[#ff4f01]/90 backdrop-blur-sm text-white text-sm font-bold rounded-full">
-                    {getCategoryName(productData[0]?.category)}
+                  {/* Image Name Badge */}
+                  <div className="absolute top-4 left-4 px-3 py-1 bg-[#ff4f01]/90 backdrop-blur-sm text-white text-lg font-bold rounded-xl">
+                    {(() => {
+                      const imageName = Array.isArray(productData[selectedImageGroup]?.image)
+                        ? productData[selectedImageGroup]?.image[selectedImageIndex]
+                        : productData[selectedImageGroup]?.image;
+                      // Remove file extension and convert to uppercase
+                      return imageName?.replace(/\.[^/.]+$/, '').toUpperCase() || '';
+                    })()}
                   </div>
+
+                  {/* Image Navigation - Only show if current group has multiple images */}
+                  {Array.isArray(productData[selectedImageGroup]?.image) && 
+                   productData[selectedImageGroup]?.image.length > 1 && (
+                    <>
+                      {/* Previous Button */}
+                      <button
+                        onClick={() => setSelectedImageIndex(prev => 
+                          prev === 0 ? productData[selectedImageGroup].image.length - 1 : prev - 1
+                        )}
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/30 hover:bg-[#ff4f01] text-white rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
+                      >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </button>
+
+                      {/* Next Button */}
+                      <button
+                        onClick={() => setSelectedImageIndex(prev => 
+                          prev === productData[selectedImageGroup].image.length - 1 ? 0 : prev + 1
+                        )}
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/30 hover:bg-[#ff4f01] text-white rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
+                      >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+
+                      {/* Image Counter */}
+                      <div className="absolute bottom-4 right-4 px-3 py-1 bg-black/50 backdrop-blur-sm text-white text-sm font-medium rounded-full">
+                        {selectedImageIndex + 1} / {productData[selectedImageGroup].image.length}
+                      </div>
+
+                      {/* Dot Indicators */}
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        {productData[selectedImageGroup].image.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => setSelectedImageIndex(index)}
+                            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                              selectedImageIndex === index 
+                                ? 'bg-[#ff4f01] w-8' 
+                                : 'bg-white/50 hover:bg-white/80'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
 
-                {/* Image Thumbnails */}
-                {productData.length > 1 && (
+                {/* Image Thumbnails for current group */}
+                {Array.isArray(productData[selectedImageGroup]?.image) && 
+                 productData[selectedImageGroup]?.image.length > 1 && (
                   <div className="grid grid-cols-4 gap-3">
-                    {productData.map((group, index) => (
+                    {productData[selectedImageGroup].image.map((img, index) => (
                       <button
                         key={index}
-                        onClick={() => setSelectedImageGroup(index)}
+                        onClick={() => setSelectedImageIndex(index)}
                         className={`relative rounded-xl overflow-hidden border-2 transition-all duration-300 ${
-                          selectedImageGroup === index 
+                          selectedImageIndex === index 
                             ? 'border-[#ff4f01] scale-105' 
                             : 'border-white/20 hover:border-white/40'
                         }`}
                       >
                         <img
-                          src={`/products/${group.image}`}
-                          alt={`Variant ${index + 1}`}
+                          src={`/products/${img}`}
+                          alt={`Image ${index + 1}`}
                           className="w-full h-16 object-cover"
                         />
                       </button>
                     ))}
+                  </div>
+                )}
+
+                {/* Variant Thumbnails (Different groups) */}
+                {productData.length > 1 && (
+                  <div>
+                    <div className="text-sm font-medium text-gray-300 mb-3">Product Variants</div>
+                    <div className="grid grid-cols-4 gap-3">
+                      {productData.map((group, index) => (
+                        <button
+                          key={index}
+                          onClick={() => {
+                            setSelectedImageGroup(index)
+                            setSelectedImageIndex(0) // Reset to first image when changing group
+                          }}
+                          className={`relative rounded-xl overflow-hidden border-2 transition-all duration-300 ${
+                            selectedImageGroup === index 
+                              ? 'border-[#ff4f01] scale-105' 
+                              : 'border-white/20 hover:border-white/40'
+                          }`}
+                        >
+                          <img
+                            src={`/products/${
+                              Array.isArray(group.image) ? group.image[0] : group.image
+                            }`}
+                            alt={`Variant ${index + 1}`}
+                            className="w-full h-16 object-cover"
+                          />
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
@@ -374,58 +490,74 @@ function ModelPage() {
           {/* Models Grid */}
           <div className="space-y-12">
             {filteredModels.length > 0 ? (
-              filteredModels.map((group, groupIndex) => (
-                <motion.div
-                  key={`${group.image}-${groupIndex}`}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: groupIndex * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden"
-                >
-                  {/* Models List */}
-                  <div className="p-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {group.models.map((model, modelIndex) => (
-                        <motion.div
-                          key={`${model.model || modelIndex}`}
-                          initial={{ opacity: 0, scale: 0.95 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.4, delay: modelIndex * 0.1 }}
-                          className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-[#ff4f01]/30 transition-all duration-300"
-                        >
-                          
-                          {/* Model Header */}
-                          {model.model && (
-                            <div className="mb-4 pb-3 border-b border-white/10">
-                              <h4 className="text-lg font-bold text-white">{model.model}</h4>
-                            </div>
-                          )}
+              filteredModels.map((group, groupIndex) => {
+                // Find the original group index in productData for navigation
+                const originalGroupIndex = productData.findIndex(pg => 
+                  JSON.stringify(pg.models) === JSON.stringify(group.models)
+                )
+                
+                return (
+                  <motion.div
+                    key={`${group.image}-${groupIndex}`}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: groupIndex * 0.1 }}
+                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden"
+                  >
+                    {/* Models List */}
+                    <div className="p-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {group.models.map((model, modelIndex) => (
+                          <motion.div
+                            key={`${model.model || modelIndex}`}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: modelIndex * 0.1 }}
+                            onClick={() => handleModelClick(originalGroupIndex, model.model)}
+                            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-[#ff4f01]/30 transition-all duration-300 cursor-pointer hover:scale-105"
+                          >
+                            
+                            {/* Model Header */}
+                            {model.model && (
+                              <div className="mb-4 pb-3 border-b border-white/10">
+                                <h4 className="text-lg font-bold text-white">{model.model}</h4>
+                              </div>
+                            )}
 
-                          {/* Model Specifications */}
-                          <div className="space-y-3">
-                            {Object.entries(model).map(([key, value]) => {
-                              if (key === 'model' || !value) return null
-                              
-                              return (
-                                <div key={key} className="flex justify-between items-start">
-                                  <span className="text-gray-400 text-sm capitalize min-w-0 mr-3">
-                                    {key.replace(/([A-Z])/g, ' $1').trim()}:
-                                  </span>
-                                  <span className="text-white text-sm font-medium text-right">
-                                    {typeof value === 'boolean' ? (value ? 'Yes' : 'No') : value}
-                                  </span>
-                                </div>
-                              )
-                            })}
-                          </div>
-                        </motion.div>
-                      ))}
+                            {/* Model Specifications */}
+                            <div className="space-y-3">
+                              {Object.entries(model).map(([key, value]) => {
+                                if (key === 'model' || !value) return null
+                                
+                                return (
+                                  <div key={key} className="flex justify-between items-start">
+                                    <span className="text-gray-400 text-sm capitalize min-w-0 mr-3">
+                                      {key.replace(/([A-Z])/g, ' $1').trim()}:
+                                    </span>
+                                    <span className="text-white text-sm font-medium text-right">
+                                      {typeof value === 'boolean' ? (value ? 'Yes' : 'No') : value}
+                                    </span>
+                                  </div>
+                                )
+                              })}
+                            </div>
+
+                            {/* Click Indicator */}
+                            <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-center text-[#ff4f01] text-sm font-medium transition-opacity duration-300">
+                              <span>Click to view product</span>
+                              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                              </svg>
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))
+                  </motion.div>
+                )
+              })
             ) : (
               /* No Results */
               <motion.div
