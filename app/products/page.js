@@ -275,7 +275,7 @@ function ProductsPage() {
                       <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-[#ff4f01]/50 transition-all duration-300 hover:scale-105 cursor-pointer">
                         
                         {/* Product Image */}
-                        <div className="relative h-48 overflow-hidden">
+                        <div className="relative h-full overflow-hidden">
                           <img
                             src={product.image}
                             alt={product.title}
