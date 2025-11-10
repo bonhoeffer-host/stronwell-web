@@ -1436,7 +1436,7 @@
     ],
     "models": [
       {
-        "model": "ST1000RC",
+        "model": "ST1000C",
         "motor": "212cc, 4 tiempos, gasolina",
         "tipoMango": "Manillar ajustable en altura y giro",
         "anchuraCorte": "900 mm",
