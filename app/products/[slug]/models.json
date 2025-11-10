@@ -215,7 +215,7 @@
   {
     "category": "forestry-and-gardening",
     "product": "chainsaw",
-    "image": ["SCSE2400C-18SN-2.webp"],
+    "image": ["SCSE2400C-18SN.webp"],
     "sharedDescription": [
       "LubricaciÃ³n de cadena automÃ¡tica ajustable",
       "Amortiguadores de vibracion - baja vibraciÃ³n y comodidad para el usuario",
@@ -224,7 +224,7 @@
     ],
     "models": [
       {
-        "model": "SCSE2400C-18SN-2",
+        "model": "SCSE2400C-18SN",
         "motor": "Gasolina, 2 tiempos, 25,4CC",
         "potenciaMaxima": "2400W",
         "barraGuia": "18\"",
