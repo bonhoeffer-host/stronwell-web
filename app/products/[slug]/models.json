@@ -1482,6 +1482,72 @@
     ]
   },
   {
+    "category": "electric-motors",
+    "product": "MOTOR ELÉCTRICO",
+    "image": ["SEE1.0HC-DS60.webp", "SEE2.0HC-DS60.webp", "SEE3.0HC-DS60.webp", "SEE4.0HC-DS60.webp", "SEE1.0LC-DS60.webp", "SEE2.0LC-DS60.webp", "SEE3.0LC-DS60.webp", "SEE4.0LC-DS60.webp"],
+    "sharedDescription": [
+       "Baja vibraciÃ³n - MÃ¡s comodidad para el usuario",
+      "Motor de bajo consumo - MÃ¡s econÃ³mico y eficiente",
+      "DiseÃ±o maduro y fiable - Funcionamiento estable y duradero",
+      "Mango en D - MÃ¡s comodidad durante el uso",
+      "DepÃ³sito de 0.55 litros - AutonomÃ­a de mÃ¡s de 1 hora",
+      "Incluye cuchilla de 3 puntas + cabezal de nylon"
+    ],
+    "models": [
+      {
+        "model": "SEE1.0HC-DS60",
+        "potencia": "1.0HP / 0,75kW",
+        "voltaje": "110 / 220V - 60Hz",
+        "2 polos": "alta velocidad"
+       },
+
+      {
+        "model": "SEE2.0HC-DS60",
+        "potencia": "2.0HP / 1,5kW",
+        "voltaje": "110 / 220V - 60Hz",
+        "2 polos": "alta velocidad"
+      },
+      {
+        "model": "SEE3.0HC-DS60",
+        "potencia": "3.0HP / 2,2kW",
+        "voltaje": "110 / 220V - 60Hz",
+        "2 polos": "alta velocidad"
+
+      },
+      {
+        "model": "SEE4.0HC-DS60",
+        "potencia": "4.0HP / 3,0kW",
+        "voltaje": "110 / 220V - 60Hz",
+        "2 polos": "alta velocidad"
+       },
+      {
+        "model": "SEE1.0LC-DS60",
+        "potencia": "1.0HP / 0,75kW",
+        "voltaje": "110 / 220V - 60Hz",
+        "4 polos": "alta velocidad"
+      },
+      {
+        "model": "SEE2.0LC-DS60",
+        "potencia": "2.0HP / 1,5kW",
+        "voltaje": "110 / 220V - 60Hz",
+        "4 polos": "baja velocidad"
+      },
+      {
+        "model": "SEE3.0LC-DS60",
+        "potencia": "3.0HP / 2,2kW",
+        "voltaje": "110 / 220V - 60Hz",
+        "4 polos": "alta velocidad"
+      },
+      {
+        "model": "SEE4.0LC-DS60",
+        "potencia": "4.0HP / 3,0kW",
+        "voltaje": "110 / 220V - 60Hz",
+        "4 polos": "baja velocidad"
+      }
+    ]
+  },
+
+  {
     "category": "marine",
     "product": "outboard-motor",
     "image": ["SM35TS.webp", "SM58TS.webp", "SM98TS.webp"],
