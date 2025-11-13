@@ -517,7 +517,7 @@
   {
     "category": "mowers",
     "product": "lawn-mower",
-    "image": ["SLM530CTC-196cc.webp", "SLM560CTC-196CC.webp"],
+    "image": ["SLM530CTC-196CC.webp", "SLM560CTC-196CC.webp"],
     "sharedDescription": [
       "Plataforma metÃ¡lica de 21\" - TamaÃ±o medio ideal",
       "Corte preciso y fiable",
@@ -526,7 +526,7 @@
     ],
     "models": [
       {
-        "model": "SLM530CTC-196cc",
+        "model": "SLM530CTC-196CC",
         "motor": "196 CC Gasolina",
         "anchuraCorte": "21\"",
         "alturaCorte": "25-75 mm (7 opciones de ajuste central)",
@@ -1122,7 +1122,7 @@
   {
     "category": "power",
     "product": "generator",
-    "image": ["SG3.5iCS1-60.webp", "SG3.5iCS2-60.webp", "SG3.5iCS1-50.webp", "SG3.5iCS2-50.webp", "SG1.8iCS2-50.webp", "SG3.5iCS2-50-2.webp"],
+    "image": ["SG3.5ICS1-60.webp", "SG3.5ICS2-60.webp", "SG3.5ICS1-50.webp", "SG3.5ICS2-50.webp", "SG1.8ICS2-50.webp", "SG3.5ICS2-50-2.webp"],
     "sharedDescription": [
       "Bobina de cobre 100% (más eficiente energéticamente)",
       "Tecnología inverter - alto rendimiento",
