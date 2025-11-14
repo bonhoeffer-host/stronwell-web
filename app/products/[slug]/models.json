@@ -1058,7 +1058,7 @@
   {
     "category": "power",
     "product": "generator",
-    "image": ["SG9.0CSD-60-2.webp", "SG8.1CSD-2.webp"],
+    "image": ["SG9.0CSD-60.webp", "SG8.1CSD.webp"],
     "sharedDescription": [
       "Alternador de acero laminado en frío - mejor rendimiento en alta temperatura",
       "Bobina 100% cobre - más eficiente energéticamente",
@@ -1096,7 +1096,7 @@
   {
     "category": "power",
     "product": "generator",
-    "image": ["SG8.1CS1-2.webp"],
+    "image": ["SG8.1CS1.webp"],
     "sharedDescription": [
       "Alternador de acero laminado en frío - mejor rendimiento en alta temperatura",
       "Bobina 100% cobre - más eficiente energéticamente",
