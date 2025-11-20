@@ -3,8 +3,11 @@ import { motion } from 'framer-motion'
 import BgLayout from '@/components/layouts/bgLayout'
 import React from 'react'
 import Link from 'next/link'
+import { useTranslation } from '@/contexts/TranslationContext'
 
 function TermsPage() {
+  const { t } = useTranslation()
+  
   const sections = [
     {
       title: "1. Acceptance of Terms",
@@ -142,16 +145,16 @@ function TermsPage() {
               <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
               </svg>
-              <span className="text-[#ff4f01] font-medium">Terms & Conditions</span>
+              <span className="text-[#ff4f01] font-medium">{t('terms.title')}</span>
             </nav>
 
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              Terms & <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Conditions</span>
+              {t('terms.title')}
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Please read these terms and conditions carefully before using our services
+              {t('terms.subtitle')}
             </p>
-            <h3 className="text-lg font-semibold text-white mb-2">Last Updated</h3>
+            <h3 className="text-lg font-semibold text-white mb-2">{t('terms.lastUpdated')}</h3>
             <p className="text-gray-300">July 30, 2025</p>
             <div className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full mt-8" />
           </motion.div>

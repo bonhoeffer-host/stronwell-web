@@ -4,8 +4,10 @@ import BgLayout from '@/components/layouts/bgLayout'
 import React, { useState } from 'react'
 import Link from 'next/link'
 import categoryData from './category.json'
+import { useTranslation } from '@/contexts/TranslationContext'
 
 function ProductsPage() {
+  const { t } = useTranslation()
   const [activeCategory, setActiveCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
 
@@ -127,7 +129,7 @@ function ProductsPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                Our
+                {t('products.title')}
               </motion.span>
               <motion.span
                 className="block bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent"
@@ -143,7 +145,7 @@ function ProductsPage() {
           {/* Subtitle */}
           <motion.div variants={contentVariants} className="mb-12">
             <p className="text-xl md:text-2xl lg:text-3xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              Discover our comprehensive range of high-quality outdoor power equipment designed for professionals and enthusiasts alike.
+              {t('products.subtitle')}
             </p>
           </motion.div>
 
@@ -203,7 +205,7 @@ function ProductsPage() {
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="Search products..."
+                  placeholder={t('products.searchPlaceholder')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full px-4 py-3 pl-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ff4f01] transition-colors duration-300"
@@ -233,7 +235,7 @@ function ProductsPage() {
                     : 'bg-white/10 backdrop-blur-sm text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
               >
-                All Products ({getCategoryCount('all')})
+                {t('products.allCategories')} ({getCategoryCount('all')})
               </button>
               
               {/* Category Tabs */}
@@ -297,7 +299,7 @@ function ProductsPage() {
                           
                           {/* View Details Button */}
                           <div className="flex items-center text-[#ff4f01] font-medium group-hover:text-[#ff6b2e] transition-colors duration-300">
-                            <span className="mr-2">View Details</span>
+                            <span className="mr-2">{t('products.viewDetails')}</span>
                             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>

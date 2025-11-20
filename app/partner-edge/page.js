@@ -3,8 +3,10 @@ import { motion } from 'framer-motion'
 import BgLayout from '@/components/layouts/bgLayout'
 import React from 'react'
 import Link from 'next/link'
+import { useTranslation } from '@/contexts/TranslationContext'
 
 function PartnerPage() {
+  const { t } = useTranslation()
   const heroVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -110,7 +112,7 @@ function PartnerPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
               >
-                Partner Edge
+                {t('partnerEdge.title')}
               </motion.span>
             </h1>
           </motion.div>
@@ -118,10 +120,10 @@ function PartnerPage() {
           {/* Subtitle */}
           <motion.div variants={contentVariants} className="mb-8">
             <h2 className="text-2xl md:text-3xl lg:text-4xl text-white/90 font-bold mb-4">
-              Real Solutions for Real Importer Challenges
+              {t('partnerEdge.subtitle')}
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl text-white/80 max-w-5xl mx-auto leading-relaxed">
-              Stronwell helps Latin American distributors break free from overpriced premium brands and unreliable low-end imports—offering trusted performance, solid margins, and scalable growth.
+              {t('partnerEdge.subtitle2')}
             </p>
           </motion.div>
 
@@ -149,7 +151,7 @@ function PartnerPage() {
                 
                 {/* Button Content */}
                 <div className="relative z-10 flex items-center space-x-2">
-                  <span className='text-xl'>See Solutions</span>
+                  <span className='text-xl'>{t('partnerEdge.ourSolutions')}</span>
                   <motion.svg
                     className="w-5 h-5"
                     fill="none"
@@ -186,7 +188,7 @@ function PartnerPage() {
                   
                   {/* Button Content */}
                   <div className="relative z-10 flex items-center space-x-2">
-                    <span className='text-xl'>Contact Us</span>
+                    <span className='text-xl'>{t('partnerEdge.contactUs')}</span>
                     <motion.svg
                       className="w-5 h-5"
                       fill="none"
@@ -209,7 +211,7 @@ function PartnerPage() {
           transition={{ duration: 1.5, repeat: Infinity }}
         >
           <div className="flex flex-col items-center space-y-2 text-white/60">
-            <span className="text-sm font-medium">Discover solutions</span>
+            <span className="text-sm font-medium">{t('partnerEdge.scrollToExplore')}</span>
             <motion.svg
               className="w-6 h-6"
               fill="none"
@@ -233,74 +235,71 @@ function PartnerPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              We Solve Your <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Biggest Challenges</span>
+              {t('partnerEdge.challenges.title')}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full mb-6" />
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Real distributor challenges require engineered solutions, not Band-Aid fixes.
-            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                challenge: "Dominated by Premium Brands?",
-                solution: "30% lower FOB + dealer-ready sales kits",
+                challenge: t('partnerEdge.challenges.challenge1.title'),
+                solution: t('partnerEdge.challenges.challenge1.description'),
                 icon: "💰"
               },
               {
-                challenge: "Fear SKU Conflicts?",
-                solution: "Smart portfolio mapping prevents cannibalization",
+                challenge: t('partnerEdge.challenges.challenge2.title'),
+                solution: t('partnerEdge.challenges.challenge2.description'),
                 icon: "🎯"
               },
               {
-                challenge: "Worried Products Won\'t Move?",
-                solution: "Fast-moving SKUs + POS & promo materials",
+                challenge: t('partnerEdge.challenges.challenge3.title'),
+                solution: t('partnerEdge.challenges.challenge3.description'),
                 icon: "📈"
               },
               {
-                challenge: "Warranty Kills Margin?",
-                solution: "Spares + 24-hr support + shared warranty handling",
+                challenge: t('partnerEdge.challenges.challenge4.title'),
+                solution: t('partnerEdge.challenges.challenge4.description'),
                 icon: "🔧"
               },
               {
-                challenge: "Already Import from China?",
-                solution: "Branded, stable specs with resale trust",
+                challenge: t('partnerEdge.challenges.challenge5.title'),
+                solution: t('partnerEdge.challenges.challenge5.description'),
                 icon: "🏷️"
               },
               {
-                challenge: "Hate Rigid Contracts?",
-                solution: "No targets. Soft exclusivity starts from Order 1",
+                challenge: t('partnerEdge.challenges.challenge6.title'),
+                solution: t('partnerEdge.challenges.challenge6.description'),
                 icon: "🤝"
               },
               {
-                challenge: "Weak in Digital?",
-                solution: "Social reels, flyers, WhatsApp kits—all done for you",
+                challenge: t('partnerEdge.challenges.challenge7.title'),
+                solution: t('partnerEdge.challenges.challenge7.description'),
                 icon: "📱"
               },
               {
-                challenge: "Specs Keep Changing?",
-                solution: "Fixed codes + manuals + update logs",
+                challenge: t('partnerEdge.challenges.challenge8.title'),
+                solution: t('partnerEdge.challenges.challenge8.description'),
                 icon: "📋"
               },
               {
-                challenge: "Service Team Struggles?",
-                solution: "Video guides + mechanic cheat sheets",
+                challenge: t('partnerEdge.challenges.challenge9.title'),
+                solution: t('partnerEdge.challenges.challenge9.description'),
                 icon: "🎥"
               },
               {
-                challenge: "Dealers Demand Big Discounts?",
-                solution: "Demo units + incentive flyers = sell without cutting",
+                challenge: t('partnerEdge.challenges.challenge10.title'),
+                solution: t('partnerEdge.challenges.challenge10.description'),
                 icon: "🎁"
               },
               {
-                challenge: "Returns Hit Profits?",
-                solution: "Setup videos + misuse filters prevent false claims",
+                challenge: t('partnerEdge.challenges.challenge11.title'),
+                solution: t('partnerEdge.challenges.challenge11.description'),
                 icon: "📹"
               },
               {
-                challenge: "Fear Category Dependence?",
-                solution: "Launch spans 6+ categories to de-risk from Day 1",
+                challenge: t('partnerEdge.challenges.challenge12.title'),
+                solution: t('partnerEdge.challenges.challenge12.description'),
                 icon: "🌟"
               }
             ].map((item, index) => (
@@ -334,7 +333,7 @@ function PartnerPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              How Partner Edge <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Works</span>
+              {t('partnerEdge.howItWorks.title')}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full mb-6" />
           </motion.div>
@@ -346,32 +345,32 @@ function PartnerPage() {
             {[
               {
                 step: "Step 1",
-                title: "You Launch with 3-4 Containers",
-                description: "Start your journey with our carefully selected starter portfolio",
+                title: t('partnerEdge.howItWorks.step1.title'),
+                description: t('partnerEdge.howItWorks.step1.description'),
                 position: "left"
               },
               {
                 step: "Step 2", 
-                title: "You Receive Dealer Kits + Spares + Display Units",
-                description: "Complete sales ecosystem delivered to accelerate your market entry",
+                title: t('partnerEdge.howItWorks.step2.title'),
+                description: t('partnerEdge.howItWorks.step2.description'),
                 position: "right"
               },
               {
                 step: "Step 3",
-                title: "Soft Exclusivity from Order 1",
-                description: "Immediate territorial protection without rigid commitments",
+                title: t('partnerEdge.howItWorks.step3.title'),
+                description: t('partnerEdge.howItWorks.step3.description'),
                 position: "left"
               },
               {
                 step: "Step 4",
-                title: "You Rotate Stock Within 6 Months",
-                description: "Proven fast-moving inventory ensures healthy cash flow",
+                title: t('partnerEdge.howItWorks.step4.title'),
+                description: t('partnerEdge.howItWorks.step4.description'),
                 position: "right"
               },
               {
                 step: "Step 5",
-                title: "You Earn Country-Wide 24-Month Exclusivity",
-                description: "Full territorial protection with proven performance metrics",
+                title: t('partnerEdge.howItWorks.step5.title'),
+                description: t('partnerEdge.howItWorks.step5.description'),
                 position: "left"
               }
             ].map((step, index) => (
@@ -416,10 +415,10 @@ function PartnerPage() {
           <div className="relative p-12 rounded-3xl overflow-hidden">
             <div className="relative z-10">
               <h3 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Distribution Business?
+                {t('partnerEdge.cta.title')}
               </h3>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join the Partner Edge program and scale with confidence, margin, and dealer trust.
+                {t('partnerEdge.cta.subtitle')}
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

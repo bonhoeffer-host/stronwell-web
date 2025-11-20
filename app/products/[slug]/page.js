@@ -1,20 +1,28 @@
 "use client"
 import { motion } from 'framer-motion'
 import BgLayout from '@/components/layouts/bgLayout'
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
-import modelsData from './models.json'
+import { useTranslation } from '@/contexts/TranslationContext'
+import modelsDataES from './models.json'
+import modelsDataEN from './models-en.json'
 
 function ModelPage() {
   const params = useParams()
   const slug = params.slug
+  const { locale, t } = useTranslation()
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedImageGroup, setSelectedImageGroup] = useState(0)
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
   const [showQuoteModal, setShowQuoteModal] = useState(false)
   const [showThankYouModal, setShowThankYouModal] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  
+  // Select data based on current language
+  const modelsData = useMemo(() => {
+    return locale === 'en' ? modelsDataEN : modelsDataES
+  }, [locale])
 
   // Form data state
   const [formData, setFormData] = useState({
@@ -31,7 +39,7 @@ function ModelPage() {
   const productData = useMemo(() => {
     const productGroups = modelsData.filter(item => item.product === slug)
     return productGroups
-  }, [slug])
+  }, [slug, modelsData])
 
   // Filter models based on search term
   const filteredModels = useMemo(() => {
@@ -190,11 +198,11 @@ function ModelPage() {
       <BgLayout>
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Product Not Found</h1>
-            <p className="text-gray-300 mb-8">The product you&apos;re looking for doesn&apos;t exist.</p>
+            <h1 className="text-4xl font-bold text-white mb-4">{t('products.productNotFound')}</h1>
+            <p className="text-gray-300 mb-8">{t('products.productNotFoundDesc')}</p>
             <Link href="/products">
               <button className="px-6 py-3 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] text-white font-bold rounded-xl">
-                Back to Products
+                {t('products.backToProducts')}
               </button>
             </Link>
           </div>
@@ -218,13 +226,13 @@ function ModelPage() {
           >
             <nav className="flex items-center space-x-2 text-sm text-gray-300">
               <Link href="/" className="hover:text-[#ff4f01] transition-colors duration-200">
-                Home
+                {t('products.breadcrumbHome')}
               </Link>
               <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
               </svg>
               <Link href="/products" className="hover:text-[#ff4f01] transition-colors duration-200">
-                Products
+                {t('products.breadcrumbProducts')}
               </Link>
               <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
@@ -343,7 +351,7 @@ function ModelPage() {
                 {/* Variant Thumbnails (Different groups) */}
                 {productData.length > 1 && (
                   <div>
-                    <div className="text-sm font-medium text-gray-300 mb-3">Product Variants</div>
+                    <div className="text-sm font-medium text-gray-300 mb-3">{t('products.productVariants')}</div>
                     <div className="grid grid-cols-4 gap-3">
                       {productData.map((group, index) => (
                         <button
@@ -387,7 +395,7 @@ function ModelPage() {
                   {getProductTitle(slug)}
                 </h1>
                 <p className="text-xl text-gray-300">
-                  Professional {getCategoryName(productData[0]?.category)} Equipment
+                  {t('products.professionalEquipment')} {getCategoryName(productData[0]?.category)} {t('products.equipment')}
                 </p>
               </div>
 
@@ -395,22 +403,22 @@ function ModelPage() {
               <div className="grid grid-cols-3 gap-4">
                 <div className="text-center p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
                   <div className="text-2xl font-bold text-[#ff4f01] mb-1">{productData.length}</div>
-                  <div className="text-sm text-gray-300">Variants</div>
+                  <div className="text-sm text-gray-300">{t('products.variants')}</div>
                 </div>
                 <div className="text-center p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
                   <div className="text-2xl font-bold text-[#ff4f01] mb-1">{totalModels}</div>
-                  <div className="text-sm text-gray-300">Models</div>
+                  <div className="text-sm text-gray-300">{t('products.models')}</div>
                 </div>
                 <div className="text-center p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
                   <div className="text-2xl font-bold text-[#ff4f01] mb-1">24/7</div>
-                  <div className="text-sm text-gray-300">Support</div>
+                  <div className="text-sm text-gray-300">{t('products.support')}</div>
                 </div>
               </div>
 
               {/* Common Features */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                  Key Features
+                  {t('products.keyFeatures')}
                 </h3>
                 <ul className="space-y-2">
                   {productData[selectedImageGroup]?.sharedDescription?.map((feature, index) => (
@@ -430,7 +438,7 @@ function ModelPage() {
                   whileTap={{ scale: 0.95 }}
                   className="w-full cursor-pointer sm:w-auto px-8 py-4 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] text-white font-bold text-lg rounded-xl shadow-2xl hover:shadow-[#ff4f01]/25 transition-all duration-300"
                 >
-                  Get Quote
+                  {t('common.getQuote')}
                 </motion.button>
                 
                 <Link href="/partner-edge">
@@ -439,7 +447,7 @@ function ModelPage() {
                     whileTap={{ scale: 0.95 }}
                     className="w-full cursor-pointer sm:w-auto px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold text-lg rounded-xl hover:border-[#ff4f01] hover:bg-[#ff4f01]/10 transition-all duration-300"
                   >
-                    Become Partner
+                    {t('common.becomePartner')}
                   </motion.button>
                 </Link>
               </div>
@@ -461,7 +469,7 @@ function ModelPage() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Available <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Models</span>
+              {t('products.availableModels').split(' ')[0]} <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">{t('products.availableModels').split(' ')[1]}</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full mb-8" />
             
@@ -470,7 +478,7 @@ function ModelPage() {
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="Search models by specifications..."
+                  placeholder={t('products.searchModels')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full px-4 py-3 pl-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ff4f01] transition-colors duration-300"
@@ -481,7 +489,7 @@ function ModelPage() {
               </div>
               {searchTerm && (
                 <div className="text-sm text-gray-400 mt-2">
-                  Showing models matching &quot;{searchTerm}&quot;
+                  {t('products.showingModels')} &quot;{searchTerm}&quot;
                 </div>
               )}
             </div>
@@ -546,7 +554,7 @@ function ModelPage() {
 
                             {/* Click Indicator */}
                             <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-center text-[#ff4f01] text-sm font-medium transition-opacity duration-300">
-                              <span>Click to view product</span>
+                              <span>{t('products.clickToView')}</span>
                               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
                               </svg>
@@ -568,13 +576,13 @@ function ModelPage() {
                 className="text-center py-16"
               >
                 <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-4">No models found</h3>
-                <p className="text-gray-300 mb-8">Try adjusting your search term or browse all models.</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{t('products.noModelsFound')}</h3>
+                <p className="text-gray-300 mb-8">{t('products.noModelsDesc')}</p>
                 <button
                   onClick={() => setSearchTerm('')}
                   className="px-6 py-3 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] text-white font-bold rounded-xl hover:scale-105 transition-transform duration-300"
                 >
-                  Show All Models
+                  {t('products.showAllModels')}
                 </button>
               </motion.div>
             )}
@@ -594,10 +602,10 @@ function ModelPage() {
           <div className="relative p-12 rounded-3xl overflow-hidden">
             <div className="relative z-10">
               <h3 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-                Need More Information?
+                {t('products.needMoreInfo')}
               </h3>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Our technical team can help you choose the right model and provide detailed specifications.
+                {t('products.needMoreInfoDesc')}
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -607,7 +615,7 @@ function ModelPage() {
                     whileTap={{ scale: 0.95 }}
                     className="px-8 py-4 lg:text-xl cursor-pointer bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] text-white font-bold text-lg rounded-xl shadow-2xl hover:shadow-[#ff4f01]/25 transition-all duration-300"
                   >
-                    Technical Support
+                    {t('common.technicalSupport')}
                   </motion.button>
                 </Link>
                 
@@ -617,7 +625,7 @@ function ModelPage() {
                     whileTap={{ scale: 0.95 }}
                     className="px-8 py-4 lg:text-xl cursor-pointer bg-transparent border-2 border-white/30 text-white font-bold text-lg rounded-xl hover:border-[#ff4f01] hover:bg-[#ff4f01]/10 transition-all duration-300"
                   >
-                    Browse All Products
+                    {t('common.browseProducts')}
                   </motion.button>
                 </Link>
               </div>
@@ -636,7 +644,7 @@ function ModelPage() {
             className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
           >
             <div className="flex justify-between items-center mb-6">
-              <h2 className="text-2xl font-bold text-white">Request Quote</h2>
+              <h2 className="text-2xl font-bold text-white">{t('products.requestQuote')}</h2>
               <button
                 onClick={() => setShowQuoteModal(false)}
                 className="text-gray-400 hover:text-white transition-colors duration-200"
@@ -652,7 +660,7 @@ function ModelPage() {
                     {/* Name */}
                     <div>
                         <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Name *
+                        {t('products.name')} *
                         </label>
                         <input
                         type="text"
@@ -661,14 +669,14 @@ function ModelPage() {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ff4f01] transition-colors duration-300"
-                        placeholder="Your full name"
+                        placeholder={t('products.yourFullName')}
                         />
                     </div>
 
                     {/* Email */}
                     <div>
                         <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Email *
+                        {t('products.email')} *
                         </label>
                         <input
                         type="email"
@@ -677,14 +685,14 @@ function ModelPage() {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ff4f01] transition-colors duration-300"
-                        placeholder="your.email@example.com"
+                        placeholder={t('products.yourEmail')}
                         />
                     </div>
 
                     {/* Phone */}
                     <div>
                         <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone Number *
+                        {t('products.phoneNumber')} *
                         </label>
                         <input
                         type="tel"
@@ -693,14 +701,14 @@ function ModelPage() {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ff4f01] transition-colors duration-300"
-                        placeholder="+1 (555) 123-4567"
+                        placeholder={t('products.yourPhone')}
                         />
                     </div>
 
                     {/* Country */}
                     <div>
                         <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Country *
+                        {t('products.country')} *
                         </label>
                         <input
                         type="text"
@@ -709,14 +717,14 @@ function ModelPage() {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ff4f01] transition-colors duration-300"
-                        placeholder="Your country"
+                        placeholder={t('products.yourCountry')}
                         />
                     </div>
 
                     {/* Product Name - Pre-filled */}
                     <div>
                         <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Product Name
+                        {t('products.productName')}
                         </label>
                         <input
                         type="text"
@@ -731,7 +739,7 @@ function ModelPage() {
                     {/* Product Codes */}
                     <div>
                         <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Product Codes (If Any)
+                        {t('products.productCodes')}
                         </label>
                         <input
                         type="text"
@@ -739,7 +747,7 @@ function ModelPage() {
                         value={formData.productCodes}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ff4f01] transition-colors duration-300"
-                        placeholder="e.g., BBC26DC, BBC33DC"
+                        placeholder={t('products.productCodesPlaceholder')}
                         />
                     </div>
                 </div>
@@ -747,7 +755,7 @@ function ModelPage() {
                 {/* Message */}
                 <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Message with Quantity *
+                    {t('products.messageWithQuantity')} *
                     </label>
                     <textarea
                     name="message"
@@ -756,7 +764,7 @@ function ModelPage() {
                     required
                     rows={4}
                     className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ff4f01] transition-colors duration-300 resize-none"
-                    placeholder="Please provide details about your requirements and mention the quantity you need..."
+                    placeholder={t('products.messagePlaceholder')}
                     />
                 </div>
 
@@ -772,7 +780,7 @@ function ModelPage() {
                     : 'bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] hover:shadow-lg hover:shadow-[#ff4f01]/25'
                 } text-white`}
               >
-                {isSubmitting ? 'Submitting...' : 'Submit Quote Request'}
+                {isSubmitting ? t('products.submitting') : t('products.submitQuoteRequest')}
               </motion.button>
             </form>
           </motion.div>
@@ -805,14 +813,14 @@ function ModelPage() {
             </div>
 
             <div className="text-6xl mb-6">✅</div>
-            <h2 className="text-2xl font-bold text-white mb-4">Thank You!</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">{t('products.thankYou')}</h2>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Your quote request has been submitted successfully. Our team will review your requirements and get back to you within 24 hours.
+              {t('products.quoteSubmitted')}
             </p>
             
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 mb-6">
               <p className="text-sm text-gray-300 mb-2">
-                Need immediate support?
+                {t('products.needImmediateSupport')}
               </p>
               <p className="text-[#ff4f01] font-medium">
                 crm@stronwell.com
@@ -820,7 +828,7 @@ function ModelPage() {
             </div>
 
             <p className="text-sm text-gray-400">
-              Redirecting to home page in 5 seconds...
+              {t('products.redirecting')}
             </p>
           </motion.div>
         </div>

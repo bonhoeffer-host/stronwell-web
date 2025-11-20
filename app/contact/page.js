@@ -3,8 +3,10 @@ import BgLayout from '@/components/layouts/bgLayout'
 import { motion, AnimatePresence } from 'framer-motion'
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { useTranslation } from '@/contexts/TranslationContext'
 
 function ContactPage() {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -170,7 +172,7 @@ function ContactPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                Contact
+                {t('contact.title')}
               </motion.span>
               <motion.span
                 className="block bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent"
@@ -186,7 +188,7 @@ function ContactPage() {
           {/* Subtitle */}
           <motion.div variants={contentVariants} className="mb-12">
             <p className="text-xl md:text-2xl lg:text-3xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Ready to transform your industrial operations? Let&apos;s discuss your requirements and find the perfect solution.
+              {t('contact.subtitle')}
             </p>
           </motion.div>
 
@@ -196,10 +198,10 @@ function ContactPage() {
             className="grid grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {[
-              { number: "24/7", label: "Support Available" },
-              { number: "< 1hr", label: "Response Time" },
-              { number: "21+", label: "Countries Served" },
-              { number: "100%", label: "Satisfaction Rate" }
+              { number: "24/7", label: t('contact.support247') },
+              { number: "< 1hr", label: t('contact.responseTime') },
+              { number: "21+", label: t('contact.countriesServed') },
+              { number: "100%", label: t('contact.satisfactionRate') }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -231,7 +233,7 @@ function ContactPage() {
             >
               <div className="sticky top-8 ">
                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-8">
-                  Get in <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Touch</span>
+                  {t('contact.getInTouch')}
                 </h2>
                 
                 <div className="space-y-6 ">
@@ -247,7 +249,7 @@ function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-bold mb-1">Email</h3>
+                      <h3 className="text-white font-bold mb-1">{t('contact.email')}</h3>
                       <Link href="mailto:crm@stronwell.com" className="text-gray-300 hover:text-[#ff4f01] transition-colors">
                         crm@stronwell.com
                       </Link>
@@ -265,7 +267,7 @@ function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-bold mb-1">WhatsApp</h3>
+                      <h3 className="text-white font-bold mb-1">{t('contact.whatsapp')}</h3>
                       <Link href="https://wa.me/919995900918" className="text-gray-300 hover:text-green-400 transition-colors">
                         +91 9995900918
                       </Link>
@@ -283,7 +285,7 @@ function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-bold mb-1">Facebook</h3>
+                      <h3 className="text-white font-bold mb-1">{t('contact.facebook')}</h3>
                       <Link href="https://facebook.com/stronwell.machines" className="text-gray-300 hover:text-blue-400 transition-colors">
                         stronwell.machines
                       </Link>
@@ -302,7 +304,7 @@ function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-bold mb-1">Address</h3>
+                      <h3 className="text-white font-bold mb-1">{t('contact.address')}</h3>
                       <Link href="https://maps.app.goo.gl/6xCYBSgjGfJfArtY9" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-purple-400 transition-colors">
                         <p className="text-gray-300 hover:text-purple-400 transition-colors text-sm leading-relaxed">
                             Plot No. 756, 2nd Floor,<br />
@@ -325,7 +327,7 @@ function ContactPage() {
               className="lg:col-span-2"
             >
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-8">Send us a Message</h3>
+                <h3 className="text-2xl font-bold text-white mb-8">{t('contact.sendMessage')}</h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Hidden FormSubmit fields */}
@@ -338,7 +340,7 @@ function ContactPage() {
                     {/* Full Name */}
                     <motion.div variants={inputVariants} whileFocus="focus">
                       <label className="block text-white font-medium mb-2">
-                        Full Name <span className="text-[#ff4f01]">*</span>
+                        {t('contact.fullName')} <span className="text-[#ff4f01]">*</span>
                       </label>
                       <input
                         type="text"
@@ -347,14 +349,14 @@ function ContactPage() {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:border-[#ff4f01] focus:outline-none transition-all duration-300"
-                        placeholder="Enter your full name"
+                        placeholder={t('contact.fullNamePlaceholder')}
                       />
                     </motion.div>
 
                     {/* Email */}
                     <motion.div variants={inputVariants} whileFocus="focus">
                       <label className="block text-white font-medium mb-2">
-                        Email <span className="text-[#ff4f01]">*</span>
+                        {t('contact.email')} <span className="text-[#ff4f01]">*</span>
                       </label>
                       <input
                         type="email"
@@ -363,14 +365,14 @@ function ContactPage() {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:border-[#ff4f01] focus:outline-none transition-all duration-300"
-                        placeholder="Enter your email"
+                        placeholder={t('contact.emailPlaceholder')}
                       />
                     </motion.div>
 
                     {/* Phone */}
                     <motion.div variants={inputVariants} whileFocus="focus">
                       <label className="block text-white font-medium mb-2">
-                        Phone <span className="text-[#ff4f01]">*</span>
+                        {t('contact.phone')} <span className="text-[#ff4f01]">*</span>
                       </label>
                       <input
                         type="tel"
@@ -379,14 +381,14 @@ function ContactPage() {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:border-[#ff4f01] focus:outline-none transition-all duration-300"
-                        placeholder="Enter your phone number"
+                        placeholder={t('contact.phoneNumberPlaceholder')}
                       />
                     </motion.div>
 
                     {/* Country */}
                     <motion.div variants={inputVariants} whileFocus="focus">
                       <label className="block text-white font-medium mb-2">
-                        Country <span className="text-[#ff4f01]">*</span>
+                        {t('contact.country')} <span className="text-[#ff4f01]">*</span>
                       </label>
                       <input
                         type="text"
@@ -395,14 +397,14 @@ function ContactPage() {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:border-[#ff4f01] focus:outline-none transition-all duration-300"
-                        placeholder="Enter your country"
+                        placeholder={t('contact.countryPlaceholder')}
                       />
                     </motion.div>
 
                     {/* Company */}
                     <motion.div variants={inputVariants} whileFocus="focus">
                       <label className="block text-white font-medium mb-2">
-                        Company
+                        {t('contact.company')}
                       </label>
                       <input
                         type="text"
@@ -410,14 +412,14 @@ function ContactPage() {
                         value={formData.company}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:border-[#ff4f01] focus:outline-none transition-all duration-300"
-                        placeholder="Enter your company name (optional)"
+                        placeholder={t('contact.companyPlaceholder')}
                       />
                     </motion.div>
 
                     {/* Requirement */}
                     <motion.div variants={inputVariants} whileFocus="focus">
                       <label className="block text-white font-medium mb-2">
-                        Requirement <span className="text-[#ff4f01]">*</span>
+                        {t('contact.requirement')} <span className="text-[#ff4f01]">*</span>
                       </label>
                       <select
                         name="requirement"
@@ -426,10 +428,10 @@ function ContactPage() {
                         required
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:border-[#ff4f01] focus:outline-none transition-all duration-300"
                       >
-                        <option value="" className="bg-gray-800">Select requirement type</option>
-                        <option value="Buyer" className="bg-gray-800">Buyer</option>
-                        <option value="Dealer" className="bg-gray-800">Dealer</option>
-                        <option value="General Enquiry" className="bg-gray-800">General Enquiry</option>
+                        <option value="" className="bg-gray-800">{t('contact.selectRequirement')}</option>
+                        <option value="Buyer" className="bg-gray-800">{t('contact.requirementOptions.0')}</option>
+                        <option value="Dealer" className="bg-gray-800">{t('contact.requirementOptions.1')}</option>
+                        <option value="General Enquiry" className="bg-gray-800">{t('contact.requirementOptions.2')}</option>
                       </select>
                     </motion.div>
                   </div>
@@ -437,7 +439,7 @@ function ContactPage() {
                   {/* Message */}
                   <motion.div variants={inputVariants} whileFocus="focus">
                     <label className="block text-white font-medium mb-2">
-                      Message <span className="text-[#ff4f01]">*</span>
+                      {t('contact.message')} <span className="text-[#ff4f01]">*</span>
                     </label>
                     <textarea
                       name="message"
@@ -446,7 +448,7 @@ function ContactPage() {
                       required
                       rows={5}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:border-[#ff4f01] focus:outline-none transition-all duration-300 resize-none"
-                      placeholder="Tell us about your requirements..."
+                      placeholder={t('contact.messagePlaceholder')}
                     />
                   </motion.div>
 
@@ -461,11 +463,11 @@ function ContactPage() {
                     {isSubmitting ? (
                       <div className="flex items-center justify-center space-x-2">
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                        <span>Sending...</span>
+                        <span>{t('contact.sending')}</span>
                       </div>
                     ) : (
                       <div className="flex items-center justify-center space-x-2">
-                        <span>Send Message</span>
+                        <span>{t('contact.sendMessage')}</span>
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                         </svg>
@@ -503,9 +505,9 @@ function ContactPage() {
                 </svg>
               </div>
               
-              <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">{t('contact.successTitle')}</h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Your message has been sent successfully. Our team will get back to you soon.
+                {t('contact.successMessage')}
               </p>
               <p className="text-sm text-gray-400 mb-6">
                 For immediate assistance, contact us at:{' '}
@@ -520,10 +522,10 @@ function ContactPage() {
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-3 cursor-pointer bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] text-white font-bold rounded-xl"
               >
-                Close
+                {t('contact.close')}
               </motion.button>
               
-              <p className="text-xs text-gray-500 mt-4">Redirecting to home in 5 seconds...</p>
+              <p className="text-xs text-gray-500 mt-4">{t('contact.redirecting')}</p>
             </motion.div>
           </motion.div>
         )}

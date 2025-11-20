@@ -2,26 +2,26 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useTranslation } from '@/contexts/TranslationContext'
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isLanguageOpen, setIsLanguageOpen] = useState(false)
-  const [selectedLanguage, setSelectedLanguage] = useState('EN')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isProductsOpen, setIsProductsOpen] = useState(false)
-
+  const { locale, switchLocale, t } = useTranslation()
+  
   const languages = [
-    { code: 'EN', name: 'English' },
-    { code: 'ES', name: 'Español' },
-    { code: 'PT', name: 'Português' }
+    { code: 'en', name: 'English' },
+    { code: 'es', name: 'Español' }
   ]
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Products', href: '/products' },
-    { name: 'Partner Edge', href: '/partner-edge' },
-    { name: 'Contact Us', href: '/contact' }
+    { name: t('header.home'), href: '/' },
+    { name: t('header.about'), href: '/about' },
+    { name: t('header.products'), href: '/products' },
+    { name: t('header.partnerEdge'), href: '/partner-edge' },
+    { name: t('header.contact'), href: '/contact' }
   ]
 
   useEffect(() => {
@@ -288,9 +288,9 @@ function Header() {
                 {languages.map((lang, index) => (
                   <motion.button
                     key={lang.code}
-                    onClick={() => setSelectedLanguage(lang.code)}
+                    onClick={() => switchLocale()}
                     className={`px-4 py-2 text-base cursor-pointer font-medium transition-all duration-300 relative ${
-                      selectedLanguage === lang.code
+                      locale === lang.code
                         ? 'text-white'
                         : 'text-white/70 hover:text-white hover:bg-white/10'
                     }`}
@@ -298,14 +298,14 @@ function Header() {
                     whileTap={{ scale: 0.95 }}
                     aria-label={`Switch to ${lang.name}`}
                   >
-                    {selectedLanguage === lang.code && (
+                    {locale === lang.code && (
                       <motion.div
                         className="absolute inset-0 bg-[#ff4f01] rounded-lg"
                         layoutId="language-selector"
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                       />
                     )}
-                    <span className="relative z-10 text-lg">{lang.code}</span>
+                    <span className="relative z-10 text-lg">{lang.code.toUpperCase()}</span>
                   </motion.button>
                 ))}
               </div>
@@ -320,7 +320,7 @@ function Header() {
                 aria-expanded={isLanguageOpen}
                 aria-haspopup="true"
               >
-                <span className="text-base sm:text-lg font-medium">{selectedLanguage}</span>
+                <span className="text-base sm:text-lg font-medium">{locale.toUpperCase()}</span>
                 <motion.svg
                   className="w-4 h-4"
                   fill="none"
@@ -349,11 +349,11 @@ function Header() {
                       <motion.button
                         key={lang.code}
                         onClick={() => {
-                          setSelectedLanguage(lang.code)
+                          switchLocale()
                           setIsLanguageOpen(false)
                         }}
                         className={`w-15 text-left px-4 py-3 text-lg cursor-pointer transition-all duration-200 ${
-                          selectedLanguage === lang.code
+                          locale === lang.code
                             ? 'bg-[#ff4f01] text-white'
                             : 'text-white/80 hover:bg-white/10 hover:text-[#ff4f01]'
                         }`}
@@ -364,7 +364,7 @@ function Header() {
                         role="menuitem"
                       >
                         <div className="flex items-center justify-between">
-                          <span>{lang.code}</span>
+                          <span>{lang.code.toUpperCase()}</span>
                         </div>
                       </motion.button>
                     ))}

@@ -1,5 +1,6 @@
 import { Titillium_Web } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./providers";
 
 // Font configuration with optimized settings
 const titilliumWeb = Titillium_Web({
@@ -55,9 +56,11 @@ export default function RootLayout({ children }) {
         ></div>
 
         {/* Main app content */}
-        <div className="relative min-h-screen flex flex-col">
-          {children}
-        </div>
+        <Providers>
+          <div className="relative min-h-screen flex flex-col">
+            {children}
+          </div>
+        </Providers>
 
         {/* Global scripts for enhanced functionality */}
         <script

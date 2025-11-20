@@ -3,8 +3,10 @@ import { motion } from 'framer-motion'
 import BgLayout from '@/components/layouts/bgLayout'
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { useTranslation } from '@/contexts/TranslationContext'
 
 function DealerPage() {
+  const { t } = useTranslation()
   const [showThankYouModal, setShowThankYouModal] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   
@@ -131,10 +133,10 @@ function DealerPage() {
             className="mb-8"
           >
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-              Become a <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Dealer</span>
+              {t('dealer.title')}
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Join our network of trusted dealers and grow your business with premium quality machinery and equipment
+              {t('dealer.subtitle')}
             </p>
           </motion.div>
 
@@ -283,7 +285,7 @@ function DealerPage() {
                 {/* Company Name */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Company Name *
+                    {t('dealer.companyName')} *
                   </label>
                   <input
                     type="text"
@@ -292,14 +294,14 @@ function DealerPage() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ff4f01] transition-colors duration-300"
-                    placeholder="Your company name"
+                    placeholder={t('dealer.companyNamePlaceholder')}
                   />
                 </div>
 
                 {/* Email */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Email *
+                    {t('dealer.email')} *
                   </label>
                   <input
                     type="email"
@@ -308,14 +310,14 @@ function DealerPage() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ff4f01] transition-colors duration-300"
-                    placeholder="company@example.com"
+                    placeholder={t('dealer.emailPlaceholder')}
                   />
                 </div>
 
                 {/* Contact Number */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Contact Number *
+                    {t('dealer.contactNumber')} *
                   </label>
                   <input
                     type="tel"
@@ -324,14 +326,14 @@ function DealerPage() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ff4f01] transition-colors duration-300"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder={t('dealer.contactNumberPlaceholder')}
                   />
                 </div>
 
                 {/* Current Brands */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Current Brands
+                    {t('dealer.currentBrands')}
                   </label>
                   <input
                     type="text"
@@ -339,14 +341,14 @@ function DealerPage() {
                     value={formData.currentBrands}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ff4f01] transition-colors duration-300"
-                    placeholder="e.g., Honda, Yamaha, Suzuki"
+                    placeholder={t('dealer.currentBrandsPlaceholder')}
                   />
                 </div>
 
                 {/* City */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    City *
+                    {t('dealer.city')} *
                   </label>
                   <input
                     type="text"
@@ -355,14 +357,14 @@ function DealerPage() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ff4f01] transition-colors duration-300"
-                    placeholder="Your city"
+                    placeholder={t('dealer.cityPlaceholder')}
                   />
                 </div>
 
                 {/* Country */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Country *
+                    {t('dealer.country')} *
                   </label>
                   <input
                     type="text"
@@ -371,7 +373,7 @@ function DealerPage() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#ff4f01] transition-colors duration-300"
-                    placeholder="Your country"
+                    placeholder={t('dealer.countryPlaceholder')}
                   />
                 </div>
               </div>
@@ -404,7 +406,7 @@ function DealerPage() {
                     : 'bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] hover:shadow-lg hover:shadow-[#ff4f01]/25'
                 } text-white`}
               >
-                {isSubmitting ? 'Submitting Application...' : 'Submit Application'}
+                {isSubmitting ? t('dealer.submitting') : t('dealer.submitApplication')}
               </motion.button>
             </form>
           </motion.div>
@@ -481,9 +483,9 @@ function DealerPage() {
             </div>
 
             <div className="text-6xl mb-6">🎉</div>
-            <h2 className="text-2xl font-bold text-white mb-4">Application Submitted!</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">{t('dealer.successTitle')}</h2>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Thank you for your interest in becoming a Stronwell dealer. We will review your application and get back to you within 48 hours.
+              {t('dealer.successMessage')}
             </p>
             
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 mb-6">

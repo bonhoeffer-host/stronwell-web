@@ -5,8 +5,10 @@ import About from '@/components/sections/about'
 import Faqs from '@/components/sections/faqs'
 import React from 'react'
 import Link from 'next/link'
+import { useTranslation } from '@/contexts/TranslationContext'
 
 function AboutPage() {
+  const { t } = useTranslation()
   const heroVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -104,7 +106,7 @@ function AboutPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                About
+                {t('about.title')}
               </motion.span>
               <motion.span
                 className="block bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent"
@@ -120,7 +122,7 @@ function AboutPage() {
           {/* Subtitle */}
           <motion.div variants={contentVariants} className="mb-12">
             <p className="text-xl md:text-2xl lg:text-3xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Pioneering industrial excellence through innovation, quality, and unwavering commitment to our customers&apos; success.
+              {t('about.subtitle')}
             </p>
           </motion.div>
 
@@ -148,7 +150,7 @@ function AboutPage() {
                 
                 {/* Button Content */}
                 <div className="relative z-10 flex items-center space-x-2">
-                  <span className='text-xl'>Our Presence</span>
+                  <span className='text-xl'>{t('about.ourPresence')}</span>
                   <motion.svg
                     className="w-5 h-5"
                     fill="none"
@@ -185,7 +187,7 @@ function AboutPage() {
                   
                   {/* Button Content */}
                   <div className="relative z-10 flex items-center space-x-2">
-                    <span className='text-xl'>Contact Us</span>
+                    <span className='text-xl'>{t('about.contactUs')}</span>
                     <motion.svg
                       className="w-5 h-5"
                       fill="none"
@@ -208,7 +210,7 @@ function AboutPage() {
           transition={{ duration: 1.5, repeat: Infinity }}
         >
           <div className="flex flex-col items-center space-y-2 text-white/60">
-            <span className="text-sm font-medium">Scroll to explore</span>
+            <span className="text-sm font-medium">{t('about.scrollToExplore')}</span>
             <motion.svg
               className="w-6 h-6"
               fill="none"
@@ -232,7 +234,7 @@ function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Where We <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Come From</span>
+              {t('about.whereWeComeFrom.title')}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full mb-6" />
           </motion.div>
@@ -246,13 +248,13 @@ function AboutPage() {
           >
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 lg:p-12">
               <p className="text-lg lg:text-xl text-gray-300 leading-relaxed mb-6">
-                The idea for Stronwell came from real conversations with importers, technicians, and sellers — people tired of machines that failed too soon, cost too much, or arrived without support.
+                {t('about.whereWeComeFrom.para1')}
               </p>
               <p className="text-lg lg:text-xl text-gray-300 leading-relaxed mb-6">
-                The market was divided: premium machines with high investment, or cheap imports that couldn&apos;t withstand pressure. Stronwell was built to be the third way — machines that are reliable, affordable, and well-supported.
+                {t('about.whereWeComeFrom.para2')}
               </p>
               <p className="text-lg lg:text-xl text-gray-300 leading-relaxed">
-                We&apos;ve watched mechanics give up, dealers wait for parts, and users get frustrated. Stronwell is the answer: standardized specs, durable platforms, and real support.
+                {t('about.whereWeComeFrom.para3')}
               </p>
             </div>
           </motion.div>
@@ -270,7 +272,7 @@ function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              What We <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Believe</span>
+              {t('about.whatWeBelieve.title')}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full mb-6" />
           </motion.div>
@@ -279,26 +281,26 @@ function AboutPage() {
             {[
               {
                 number: "1",
-                title: "Machines Should Never Be Disposable",
-                description: "Every Stronwell product is built for durability — with serviceability and simplicity in mind.",
+                title: t('about.whatWeBelieve.belief1.title'),
+                description: t('about.whatWeBelieve.belief1.description'),
                 icon: "⚙️"
               },
               {
                 number: "2",
-                title: "Trust is Earned After the Sale",
-                description: "From spare kits and manuals to real support, we show up when it matters most.",
+                title: t('about.whatWeBelieve.belief2.title'),
+                description: t('about.whatWeBelieve.belief2.description'),
                 icon: "🤝"
               },
               {
                 number: "3",
-                title: "Margins Must Work for Everyone",
-                description: "Our pricing supports importers, dealers, and the end users — all at once.",
+                title: t('about.whatWeBelieve.belief3.title'),
+                description: t('about.whatWeBelieve.belief3.description'),
                 icon: "💰"
               },
               {
                 number: "4",
-                title: "No Gimmicks, Just Real Value",
-                description: "We don't believe in overdesign, inflated pricing, or empty promises.",
+                title: t('about.whatWeBelieve.belief4.title'),
+                description: t('about.whatWeBelieve.belief4.description'),
                 icon: "✨"
               }
             ].map((belief, index) => (
@@ -486,11 +488,11 @@ function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Global <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Presence</span>
+              {t('about.globalPresence.title')}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full mb-6" />
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Serving customers worldwide with local expertise and global standards.
+              {t('about.globalPresence.subtitle')}
             </p>
           </motion.div>
 
@@ -528,18 +530,18 @@ function AboutPage() {
             >
               {[
                 {
-                  region: "India",
-                  description: "Leading the market with innovative solutions and extensive service network across India.",
+                  region: t('about.globalPresence.location1'),
+                  description: t('about.globalPresence.para1'),
                   growth: "+35% YoY"
                 },
                 {
-                  region: "Mexico & Central America",
-                  description: "Strategic partnerships enhancing distribution and service capabilities in Mexico and Central America.",
+                  region: t('about.globalPresence.location2'),
+                  description: t('about.globalPresence.para2'),
                   growth: "+28% YoY"
                 },
                 {
-                  region: "South America",
-                  description: "Expanding footprint with dedicated service centers and local distributor networks across South America.",
+                  region: t('about.globalPresence.location3'),
+                  description: t('about.globalPresence.para2'),
                   growth: "+42% YoY"
                 }
               ].map((region, index) => (
