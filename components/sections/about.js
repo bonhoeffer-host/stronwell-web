@@ -2,8 +2,10 @@
 import { motion, useInView } from 'framer-motion'
 import React, { useRef } from 'react'
 import Link from 'next/link'
+import { useTranslation } from '../../contexts/TranslationContext'
 
 function About() {
+  const { t } = useTranslation()
   const sectionRef = useRef(null)
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" })
 
@@ -37,29 +39,29 @@ function About() {
   const values = [
     {
       id: 1,
-      title: "Innovation",
-      description: "Constantly pushing boundaries with cutting-edge technology and forward-thinking solutions.",
+      title: t('sections.about.innovation'),
+      description: t('sections.about.innovationDesc'),
       icon: "💡",
       color: "from-blue-500 to-cyan-500"
     },
     {
       id: 2,
-      title: "Quality",
-      description: "Uncompromising commitment to excellence in every product we manufacture and deliver.",
+      title: t('sections.about.quality'),
+      description: t('sections.about.qualityDesc'),
       icon: "⭐",
       color: "from-[#ff4f01] to-[#ff6b2e]"
     },
     {
       id: 3,
-      title: "Reliability",
-      description: "Building trust through consistent performance for our customers.",
+      title: t('sections.about.reliability'),
+      description: t('sections.about.reliabilityDesc'),
       icon: "🛡️",
       color: "from-green-500 to-emerald-500"
     },
     {
       id: 4,
-      title: "Sustainability",
-      description: "Creating environmentally responsible products that contribute to a better future.",
+      title: t('sections.about.sustainability'),
+      description: t('sections.about.sustainabilityDesc'),
       icon: "🌱",
       color: "from-teal-500 to-green-500"
     }
@@ -127,7 +129,7 @@ function About() {
             <h2 
               className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-100 mb-6"
             >
-              About <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Stronwell</span>
+              {t('sections.about.title').split(' ')[0]} <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Stronwell</span>
             </h2>
           </motion.div>
           
@@ -140,8 +142,7 @@ function About() {
             variants={itemVariants}
             className="text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed"
           >
-            Pioneering excellence in industrial solutions for over two decades, 
-            we&apos;ve been the trusted partner for businesses worldwide.
+            {t('sections.about.subtitle')}
           </motion.p>
         </motion.div>
 
@@ -157,23 +158,17 @@ function About() {
           >
             <motion.div variants={itemVariants}>
               <h3 className="text-3xl lg:text-5xl font-bold text-gray-100 mb-6">
-                Our <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Story</span>
+                {t('sections.about.ourStory').split(' ')[0]} <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">{t('sections.about.ourStory').split(' ')[1]}</span>
               </h3>
               <div className="space-y-6 text-lg text-gray-200 leading-relaxed">
                 <p>
-                  Founded with a vision to revolutionize the industrial equipment landscape, 
-                  Stronwell has grown from a small workshop to a global leader in manufacturing 
-                  high-quality tools and machinery.
+                  {t('sections.about.story1')}
                 </p>
                 <p>
-                  Our journey began with a simple belief: that every professional deserves 
-                  access to reliable, innovative equipment that enhances their productivity 
-                  and drives their success. This philosophy continues to guide us today.
+                  {t('sections.about.story2')}
                 </p>
                 <p>
-                  Through continuous innovation, strategic partnerships, and an unwavering 
-                  commitment to quality, we&apos;ve built a reputation that spans continents 
-                  and serves diverse industries worldwide.
+                  {t('sections.about.story3')}
                 </p>
               </div>
             </motion.div>
@@ -184,11 +179,9 @@ function About() {
               className="relative p-8 bg-gray-800 rounded-2xl border border-white/70"
             >
               <div>
-                <h4 className="text-2xl font-bold text-gray-100 mb-3">Our <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Mission</span></h4>
+                <h4 className="text-2xl font-bold text-gray-100 mb-3">{t('sections.about.ourMission').split(' ')[0]} <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">{t('sections.about.ourMission').split(' ')[1]}</span></h4>
                 <p className="text-gray-200 leading-relaxed">
-                  To empower businesses and professionals with innovative, reliable, and 
-                  sustainable industrial solutions that drive growth, efficiency, and success 
-                  in an ever-evolving marketplace.
+                  {t('sections.about.missionText')}
                 </p>
               </div>
             </motion.div>
@@ -267,11 +260,11 @@ function About() {
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
             <h3 className="text-3xl lg:text-5xl font-bold text-gray-100 mb-6">
-              Our 
-              <span className='text-[#ff4f01]'> Core Values</span>
+              {t('sections.about.ourCoreValues').split(' Core')[0]}
+              <span className='text-[#ff4f01]'> {t('sections.about.ourCoreValues').split(' ').slice(-2).join(' ')}</span>
             </h3>
             <p className="text-lg lg:text-xl text-gray-200 max-w-2xl mx-auto">
-              The principles that drive our success and guide our relationships with customers, partners, and communities.
+              {t('sections.about.valuesSubtitle')}
             </p>
           </motion.div>
 

@@ -2,8 +2,10 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useTranslation } from '../../contexts/TranslationContext'
 
 function Hero() {
+  const { t } = useTranslation()
   const [currentSlide, setCurrentSlide] = useState(0)
   const [direction, setDirection] = useState(1)
 
@@ -11,14 +13,14 @@ function Hero() {
     {
       id: 1,
       image: '/banners/home-banner.png',
-      title: 'Premium Tools for Professionals',
-      subtitle: 'Empowering excellence through innovation and quality'
+      title: t('sections.hero.slide1Title'),
+      subtitle: t('sections.hero.slide1Subtitle')
     },
     {
       id: 2,
       image: '/banners/hero-banner.png',
-      title: 'Industrial Excellence Redefined',
-      subtitle: 'Building the future with cutting-edge equipment'
+      title: t('sections.hero.slide2Title'),
+      subtitle: t('sections.hero.slide2Subtitle')
     }
   ]
 
@@ -159,7 +161,7 @@ function Hero() {
                   
                   {/* Button Content */}
                   <div className="relative z-10 flex items-center space-x-2">
-                    <span>Explore Products</span>
+                    <span>{t('sections.hero.exploreProducts')}</span>
                     <motion.svg
                       className="w-5 h-5"
                       fill="none"
@@ -200,7 +202,7 @@ function Hero() {
                   
                   {/* Button Content */}
                   <div className="relative z-10 flex items-center space-x-2">
-                    <span>Become Distributor</span>
+                    <span>{t('sections.hero.becomeDistributor')}</span>
                     <motion.svg
                       className="w-5 h-5"
                       fill="none"
@@ -225,7 +227,7 @@ function Hero() {
         transition={{ duration: 1.5, repeat: Infinity }}
       >
         <div className="flex flex-col items-center space-y-2 text-white/60">
-          <span className="text-sm font-medium">Scroll</span>
+          <span className="text-sm font-medium">{t('sections.hero.scroll')}</span>
           <motion.svg
             className="w-6 h-6"
             fill="none"

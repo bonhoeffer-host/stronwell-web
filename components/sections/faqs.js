@@ -2,40 +2,42 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { useTranslation } from '../../contexts/TranslationContext'
 
 function Faqs() {
+  const { t } = useTranslation()
   const [openFaq, setOpenFaq] = useState(null)
 
   const faqs = [
     {
       id: 1,
-      question: "What types of industrial equipment does Stronwell manufacture?",
-      answer: "Stronwell specializes in a comprehensive range of industrial equipment including agricultural machinery, power tools, garden equipment, marine motors, cleaning systems, generators, and construction tools. Our product portfolio spans over 500 different models designed for professional and commercial use."
+      question: t('sections.faqs.q1'),
+      answer: t('sections.faqs.a1')
     },
     {
       id: 2,
-      question: "Do you offer warranty on your products?",
-      answer: "Yes, all Stronwell products come with comprehensive warranty coverage. Our standard warranty ranges from 1-3 years depending on the product category. We also offer extended warranty options and comprehensive after-sales support through our global service network."
+      question: t('sections.faqs.q2'),
+      answer: t('sections.faqs.a2')
     },
     {
       id: 3,
-      question: "How can I become a distributor for Stronwell products?",
-      answer: <p>We welcome partnership opportunities with qualified distributors worldwide. To become a Stronwell distributor, you&apos;ll need to meet certain criteria including market presence, technical expertise, and service capabilities. Please contact our partnership team through our <Link href={'/dealer'} className='text-[#ff4f01] font-bold hover:underline'>Become Distributor</Link> page for detailed requirements and application process.</p>
+      question: t('sections.faqs.q3'),
+      answer: <p>{t('sections.faqs.a3')} <Link href={'/dealer'} className='text-[#ff4f01] font-bold hover:underline'>{t('sections.faqs.a3Link')}</Link> {t('sections.faqs.a3End')}</p>
     },
     {
       id: 4,
-      question: "Do you provide international shipping and support?",
-      answer: "Yes, we serve customers in over 50 countries worldwide. We have established shipping partnerships and service networks globally to ensure timely delivery and local support. Our international team can assist with logistics, customs clearance, and provide technical support in multiple languages."
+      question: t('sections.faqs.q4'),
+      answer: t('sections.faqs.a4')
     },
     {
       id: 5,
-      question: "How do I find the right product for my specific needs?",
-      answer: "Our expert team can help you select the perfect equipment for your requirements. You can browse our product categories online, use our product finder tool, or contact our technical consultants who will assess your needs and recommend the most suitable solutions. We also offer product demonstrations and trial programs for qualifying customers."
+      question: t('sections.faqs.q5'),
+      answer: t('sections.faqs.a5')
     },
     {
       id: 6,
-      question: "What kind of technical support and training do you provide?",
-      answer: "We offer comprehensive technical support including installation guidance, operation training, maintenance workshops, and troubleshooting assistance. Our certified technicians provide on-site training, video tutorials, detailed manuals, and 24/7 technical helpline support to ensure optimal performance of your equipment."
+      question: t('sections.faqs.q6'),
+      answer: t('sections.faqs.a6')
     }
   ]
 
@@ -115,7 +117,7 @@ function Faqs() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Frequently Asked <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Questions</span>
+            {t('sections.faqs.title').split(' Questions')[0]} <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">{t('sections.faqs.title').includes('Questions') ? 'Questions' : t('sections.faqs.title').split(' ').slice(-1)[0]}</span>
           </h2>
           
           <motion.div
@@ -127,8 +129,7 @@ function Faqs() {
           />
           
           <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Find answers to common questions about our products, services, and partnerships. 
-            Can&apos;t find what you&apos;re looking for? Contact our support team.
+            {t('sections.faqs.subtitle')}
           </p>
         </motion.div>
 
@@ -211,10 +212,10 @@ function Faqs() {
         >
           <motion.div variants={itemVariants} className="relative z-10">
             <h3 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Experience Excellence?
+              {t('sections.faqs.ctaTitle')}
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of satisfied customers who trust Stronwell for their industrial equipment needs.
+              {t('sections.faqs.ctaSubtitle')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -224,7 +225,7 @@ function Faqs() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 lg:text-xl cursor-pointer bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] text-white font-bold text-lg rounded-xl shadow-2xl hover:shadow-[#ff4f01]/25 transition-all duration-100"
                 >
-                  Explore Products
+                  {t('sections.faqs.exploreProducts')}
                 </motion.button>
               </Link>
               
@@ -234,7 +235,7 @@ function Faqs() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 lg:text-xl cursor-pointer bg-transparent border-2 border-white/30 text-white font-bold text-lg rounded-xl hover:border-[#ff4f01] hover:bg-[#ff4f01]/10 transition-all duration-100"
                 >
-                  Contact Us
+                  {t('sections.faqs.contactUs')}
                 </motion.button>
               </Link>
             </div>

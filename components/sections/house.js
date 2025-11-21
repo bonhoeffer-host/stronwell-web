@@ -2,43 +2,46 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 import Link from 'next/link'
+import { useTranslation } from '../../contexts/TranslationContext'
 
 function House() {
+  const { t } = useTranslation()
+  
   const companies = [
     {
       id: 1,
-      name: 'Bonhoeffer Machines',
+      name: t('sections.house.bonhoeffer.name'),
       description: 'Intensive Use',
       website: 'https://bonhoeffermachines.com',
       logo: '/logos/bon_letter.png',
-      tagline: 'Heavy Duty for Professional Use'
+      tagline: t('sections.house.bonhoeffer.tagline')
     },
     {
       id: 2,
-      name: 'Stronwell',
+      name: t('sections.house.stronwell.name'),
       description: 'Hardware Division',
       website: 'https://stronwell.com',
       logo: '/logo.png',
-      tagline: 'Mid Duty for Regular Use'
+      tagline: t('sections.house.stronwell.tagline')
     },
     {
       id: 3,
-      name: 'Mechnova Machines',
+      name: t('sections.house.mechnova.name'),
       description: 'Occasionally Use',
       website: 'https://mechnovamachines.com',
       logo: '/logos/mechnova_logo.png',
-      tagline: 'Light Duty for Home Use'
+      tagline: t('sections.house.mechnova.tagline')
     }
   ]
 
   const HardCompanies = [
     {
       id: 1,
-      name: 'Stevron Tools',
+      name: t('sections.house.stevron.name'),
       description: 'Hardware Division',
       website: 'https://stevrontools.com',
       logo: '/logos/stevron_logo.png',
-      tagline: 'Premium Tools for Professionals'
+      tagline: t('sections.house.stevron.tagline')
     }
   ]
 
@@ -107,9 +110,9 @@ function House() {
             className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-100 mb-6"
             style={{ fontFamily: 'var(--font-titillium-web)' }}
           >
-            Garden & {' '}
+            {t('sections.house.gardenForestry').split(' & ')[0]} & {' '}
             <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">
-              Forestry
+              {t('sections.house.gardenForestry').split(' & ')[1]}
             </span>
           </motion.h2>
           
@@ -214,9 +217,9 @@ function House() {
             className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-100 mb-6"
             style={{ fontFamily: 'var(--font-titillium-web)' }}
           >
-            Hardware {' '}
+            {t('sections.house.hardwareDivision').split(' ')[0]} {' '}
             <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">
-              Division
+              {t('sections.house.hardwareDivision').split(' ')[1]}
             </span>
           </motion.h2>
           

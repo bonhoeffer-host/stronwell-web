@@ -3,8 +3,10 @@ import { motion } from 'framer-motion'
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import productsData from '../../data/homeProducts.json'
+import { useTranslation } from '../../contexts/TranslationContext'
 
 function Products() {
+  const { t } = useTranslation()
   const [isPaused, setIsPaused] = useState(false)
   const [currentX, setCurrentX] = useState(0)
   const containerRef = useRef(null)
@@ -101,7 +103,7 @@ function Products() {
               className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-100 mb-6"
               style={{ fontFamily: 'var(--font-titillium-web)' }}
             >
-              Our <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">Products</span>
+              {t('sections.homeProducts.title').split(' ')[0]} <span className="bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] bg-clip-text text-transparent">{t('sections.homeProducts.title').split(' ')[1]}</span>
             </h2>
           </motion.div>
           
@@ -114,8 +116,7 @@ function Products() {
             variants={titleVariants}
             className="text-lg lg:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed"
           >
-            Discover our comprehensive range of professional-grade equipment and tools, 
-            designed to meet the highest standards of quality and performance.
+            {t('sections.homeProducts.subtitle')}
           </motion.p>
         </motion.div>
 
@@ -184,7 +185,7 @@ function Products() {
                         
                         {/* View Details Link */}
                         <div className="mt-4 flex items-center text-[#ff4f01] font-medium text-sm group-hover:text-[#ff6b2e] transition-colors duration-300">
-                          <span>View Details</span>
+                          <span>{t('sections.homeProducts.viewDetails')}</span>
                           <motion.svg
                             className="w-4 h-4 ml-2"
                             fill="none"
@@ -228,7 +229,7 @@ function Products() {
               
               {/* Button Content */}
               <div className="relative z-10 flex items-center space-x-3">
-                <span>Explore All Products</span>
+                <span>{t('sections.homeProducts.exploreAll')}</span>
                 <motion.svg
                   className="w-5 h-5"
                   fill="none"

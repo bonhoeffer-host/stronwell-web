@@ -411,13 +411,106 @@
     "sort": "Sort"
   },
   "footer": {
-    "description": "Your trusted partner for professional equipment solutions",
-    "quickLinks": "Quick Links",
-    "contact": "Contact Information",
-    "followUs": "Follow Us",
-    "allRightsReserved": "All rights reserved",
+    "description": "Empowering professionals with premium tools and equipment. Building the future of industrial excellence through innovation and quality.",
+    "becomeDealer": "Become a Dealer",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "ourStory": "Our Story",
+    "faqs": "FAQs",
+    "productsTitle": "Products",
+    "ourProducts": "Our Products",
+    "brushCutter": "Brush Cutter",
+    "chainsaw": "Chainsaw",
+    "support": "Support",
+    "partnerEdge": "Partner Edge",
+    "contactUs": "Contact Us",
+    "warranty": "Warranty",
+    "contactEmail": "Contact Us:",
+    "whatsapp": "WhatsApp: +91 9995900918",
+    "facebook": "Facebook: stronwell.machines",
+    "copyright": "© {year} Stronwell. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
-    "cookies": "Cookie Policy"
+    "cookiePolicy": "Cookie Policy",
+    "backToTop": "Back to top"
+  },
+  "sections": {
+    "about": {
+      "title": "About Stronwell",
+      "subtitle": "Pioneering excellence in industrial solutions for over two decades, we've been the trusted partner for businesses worldwide.",
+      "ourStory": "Our Story",
+      "story1": "Founded with a vision to revolutionize the industrial equipment landscape, Stronwell has grown from a small workshop to a global leader in manufacturing high-quality tools and machinery.",
+      "story2": "Our journey began with a simple belief: that every professional deserves access to reliable, innovative equipment that enhances their productivity and drives their success. This philosophy continues to guide us today.",
+      "story3": "Through continuous innovation, strategic partnerships, and an unwavering commitment to quality, we've built a reputation that spans continents and serves diverse industries worldwide.",
+      "ourMission": "Our Mission",
+      "missionText": "To empower businesses and professionals with innovative, reliable, and sustainable industrial solutions that drive growth, efficiency, and success in an ever-evolving marketplace.",
+      "ourCoreValues": "Our Core Values",
+      "valuesSubtitle": "The principles that drive our success and guide our relationships with customers, partners, and communities.",
+      "innovation": "Innovation",
+      "innovationDesc": "Constantly pushing boundaries with cutting-edge technology and forward-thinking solutions.",
+      "quality": "Quality",
+      "qualityDesc": "Uncompromising commitment to excellence in every product we manufacture and deliver.",
+      "reliability": "Reliability",
+      "reliabilityDesc": "Building trust through consistent performance for our customers.",
+      "sustainability": "Sustainability",
+      "sustainabilityDesc": "Creating environmentally responsible products that contribute to a better future."
+    },
+    "faqs": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions about our products, services, and partnerships. Can't find what you're looking for? Contact our support team.",
+      "q1": "What types of industrial equipment does Stronwell manufacture?",
+      "a1": "Stronwell specializes in a comprehensive range of industrial equipment including agricultural machinery, power tools, garden equipment, marine motors, cleaning systems, generators, and construction tools. Our product portfolio spans over 500 different models designed for professional and commercial use.",
+      "q2": "Do you offer warranty on your products?",
+      "a2": "Yes, all Stronwell products come with comprehensive warranty coverage. Our standard warranty ranges from 1-3 years depending on the product category. We also offer extended warranty options and comprehensive after-sales support through our global service network.",
+      "q3": "How can I become a distributor for Stronwell products?",
+      "a3": "We welcome partnership opportunities with qualified distributors worldwide. To become a Stronwell distributor, you'll need to meet certain criteria including market presence, technical expertise, and service capabilities. Please contact our partnership team through our",
+      "a3Link": "Become Distributor",
+      "a3End": "page for detailed requirements and application process.",
+      "q4": "Do you provide international shipping and support?",
+      "a4": "Yes, we serve customers in over 50 countries worldwide. We have established shipping partnerships and service networks globally to ensure timely delivery and local support. Our international team can assist with logistics, customs clearance, and provide technical support in multiple languages.",
+      "q5": "How do I find the right product for my specific needs?",
+      "a5": "Our expert team can help you select the perfect equipment for your requirements. You can browse our product categories online, use our product finder tool, or contact our technical consultants who will assess your needs and recommend the most suitable solutions. We also offer product demonstrations and trial programs for qualifying customers.",
+      "q6": "What kind of technical support and training do you provide?",
+      "a6": "We offer comprehensive technical support including installation guidance, operation training, maintenance workshops, and troubleshooting assistance. Our certified technicians provide on-site training, video tutorials, detailed manuals, and 24/7 technical helpline support to ensure optimal performance of your equipment.",
+      "ctaTitle": "Ready to Experience Excellence?",
+      "ctaSubtitle": "Join thousands of satisfied customers who trust Stronwell for their industrial equipment needs.",
+      "exploreProducts": "Explore Products",
+      "contactUs": "Contact Us"
+    },
+    "hero": {
+      "slide1Title": "Premium Tools for Professionals",
+      "slide1Subtitle": "Empowering excellence through innovation and quality",
+      "slide2Title": "Industrial Excellence Redefined",
+      "slide2Subtitle": "Building the future with cutting-edge equipment",
+      "exploreProducts": "Explore Products",
+      "becomeDistributor": "Become Distributor",
+      "scroll": "Scroll"
+    },
+    "homeProducts": {
+      "title": "Our Products",
+      "subtitle": "Discover our comprehensive range of professional-grade equipment and tools, designed to meet the highest standards of quality and performance.",
+      "viewDetails": "View Details",
+      "exploreAll": "Explore All Products"
+    },
+    "house": {
+      "gardenForestry": "Garden & Forestry",
+      "hardwareDivision": "Hardware Division",
+      "bonhoeffer": {
+        "name": "Bonhoeffer Machines",
+        "tagline": "Heavy Duty for Professional Use"
+      },
+      "stronwell": {
+        "name": "Stronwell",
+        "tagline": "Mid Duty for Regular Use"
+      },
+      "mechnova": {
+        "name": "Mechnova Machines",
+        "tagline": "Light Duty for Home Use"
+      },
+      "stevron": {
+        "name": "Stevron Tools",
+        "tagline": "Premium Tools for Professionals"
+      }
+    }
   }
 }

@@ -2,41 +2,43 @@
 import { motion, useInView } from 'framer-motion'
 import React, { useRef, useState } from 'react'
 import Link from 'next/link'
+import { useTranslation } from '../../contexts/TranslationContext'
 
 function Footer() {
+  const { t } = useTranslation()
   const footerRef = useRef(null)
   const isInView = useInView(footerRef, { once: true, amount: 0.2 })
   const [hoveredSocial, setHoveredSocial] = useState(null)
 
   const footerSections = [
     {
-      title: "Company",
+      title: t('footer.company'),
       links: [
-        { name: "About Us", href: "/about" },
-        { name: "Our Story", href: "/#our-story" },
+        { name: t('footer.aboutUs'), href: "/about" },
+        { name: t('footer.ourStory'), href: "/#our-story" },
         // { name: "Our Vision", href: "/about#vision" },
         // { name: "Our Values", href: "/about#values" },
         // { name: "Careers", href: "https://bonhoeffer.in/careers" },
-        { name: "FAQs", href: "/#faqs" },
+        { name: t('footer.faqs'), href: "/#faqs" },
         // { name: "News & Press", href: "/news" }
       ]
     },
     {
-      title: "Products",
+      title: t('footer.productsTitle'),
       links: [
-        { name: "Our Products", href: "/products" },
-        { name: "Brush Cutter", href: "/products/brush-cutter" },
-        { name: "Chainsaw", href: "/products/chainsaw" },
+        { name: t('footer.ourProducts'), href: "/products" },
+        { name: t('footer.brushCutter'), href: "/products/brush-cutter" },
+        { name: t('footer.chainsaw'), href: "/products/chainsaw" },
         // { name: "Accessories", href: "/products/accessories" }
       ]
     },
     {
-      title: "Support",
+      title: t('footer.support'),
       links: [
-        { name: "Partner Edge", href: "/partner-edge" },
-        { name: "Contact Us", href: "/contact" },
+        { name: t('footer.partnerEdge'), href: "/partner-edge" },
+        { name: t('footer.contactUs'), href: "/contact" },
         // { name: "Documentation", href: "/docs" },
-        { name: "Warranty", href: "/warranty" }
+        { name: t('footer.warranty'), href: "/warranty" }
       ]
     },
     // {
@@ -173,8 +175,7 @@ function Footer() {
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 0.3, duration: 0.6 }}
               >
-                Empowering professionals with premium tools and equipment. 
-                Building the future of industrial excellence through innovation and quality.
+                {t('footer.description')}
               </motion.p>
 
               <Link href="/dealer">
@@ -184,7 +185,7 @@ function Footer() {
                   transition={{ delay: 0.5, duration: 0.4 }}
                   className="px-6 py-3 bg-[#ff4f01] text-white text-xl font-semibold cursor-pointer hover:scale-105 rounded-lg shadow-lg hover:bg-[#ff6b2e] transition-all duration-300"
                 >
-                    Become a Dealer
+                    {t('footer.becomeDealer')}
                 </motion.button>
               </Link>
             </motion.div>
@@ -263,7 +264,7 @@ function Footer() {
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </motion.svg>
-                    <span className="text-sm md:text-lg font-bold">Contact Us:</span>
+                    <span className="text-sm md:text-lg font-bold">{t('footer.contactEmail')}</span>
                     <motion.a
                       href="mailto:crm@stronwell.com"
                       className="text-sm md:text-lg hover:text-[#ff4f01] transition-all duration-300"
@@ -335,7 +336,7 @@ function Footer() {
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 1, duration: 0.4 }}
               >
-                © {new Date().getFullYear()} Stronwell. All rights reserved.
+                {t('footer.copyright', { year: new Date().getFullYear() })}
               </motion.p>
 
               <div className="hidden md:block"/>
@@ -348,13 +349,13 @@ function Footer() {
                 transition={{ delay: 1.1, duration: 0.4 }}
               >
                 <Link href="/privacy" className="text-white/70 hover:text-[#ff4f01] transition-all duration-300">
-                  Privacy Policy
+                  {t('footer.privacyPolicy')}
                 </Link>
                 <Link href="/terms" className="text-white/70 hover:text-[#ff4f01] transition-all duration-300">
-                  Terms of Service
+                  {t('footer.termsOfService')}
                 </Link>
                 <Link href="/cookies" className="text-white/70 hover:text-[#ff4f01] transition-all duration-300">
-                  Cookie Policy
+                  {t('footer.cookiePolicy')}
                 </Link>
               </motion.div>
 
@@ -371,7 +372,7 @@ function Footer() {
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 1.2, duration: 0.4 }}
               >
-                <span className="text-base">Back to top</span>
+                <span className="text-base">{t('footer.backToTop')}</span>
                 <motion.svg
                   className="w-5 h-5"
                   fill="none"
