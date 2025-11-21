@@ -148,7 +148,7 @@ function PrivacyPage() {
             {/* Breadcrumb */}
             <nav className="flex items-center justify-center space-x-2 text-sm text-gray-300 mb-8">
               <Link href="/" className="hover:text-[#ff4f01] transition-colors duration-200">
-                Home
+                {t('common.home')}
               </Link>
               <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
@@ -179,20 +179,17 @@ function PrivacyPage() {
             transition={{ duration: 0.8 }}
             className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-12"
           >
-            <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
-              Our Commitment to Privacy
-            </h2>
-            <div className="prose prose-invert max-w-none">
-              <p className="text-gray-300 leading-relaxed mb-4">
-                At Stronwell Machines, we are committed to protecting your privacy and ensuring the security of your personal information. 
-                This Privacy Policy explains how we collect, use, share, and protect information about you when you use our website, 
-                products, and services.
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                We believe in transparency and want you to understand your rights regarding your personal data. 
-                This policy applies to all information collected through our website, mobile applications, and other digital services.
-              </p>
-            </div>
+              <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
+                {t('privacy.commitmentHeading')}
+              </h2>
+              <div className="prose prose-invert max-w-none">
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  {t('privacy.commitmentPara1')}
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  {t('privacy.commitmentPara2')}
+                </p>
+              </div>
           </motion.div>
         </div>
       </section>
@@ -235,10 +232,10 @@ function PrivacyPage() {
             <div className="relative p-12 rounded-3xl overflow-hidden">
               <div className="relative z-10">
                 <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                  Questions About Your Privacy?
+                  {t('privacy.questionsHeading')}
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Our privacy team is here to help you understand how we protect your data and exercise your rights.
+                  {t('privacy.questionsText')}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -248,7 +245,7 @@ function PrivacyPage() {
                       whileTap={{ scale: 0.95 }}
                       className="px-8 py-4 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] text-white font-bold text-lg rounded-xl shadow-2xl hover:shadow-[#ff4f01]/25 transition-all duration-300"
                     >
-                      Contact Privacy Team
+                      {t('privacy.contactPrivacyTeam')}
                     </motion.button>
                   </Link>
                   
@@ -258,7 +255,7 @@ function PrivacyPage() {
                       whileTap={{ scale: 0.95 }}
                       className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold text-lg rounded-xl hover:border-[#ff4f01] hover:bg-[#ff4f01]/10 transition-all duration-300"
                     >
-                      Terms & Conditions
+                      {t('privacy.termsConditions')}
                     </motion.button>
                   </Link>
                 </div>
@@ -282,11 +279,10 @@ function PrivacyPage() {
               <svg className="w-6 h-6 text-[#ff4f01] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <h4 className="text-lg font-semibold text-white">Your Privacy Matters</h4>
+              <h4 className="text-lg font-semibold text-white">{t('privacy.privacyMattersHeading')}</h4>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              We are committed to maintaining the highest standards of data protection and privacy. 
-              If you have any concerns about how your information is handled, please don&apos;t hesitate to contact us.
+              {t('privacy.privacyMattersText')}
             </p>
           </motion.div>
         </div>

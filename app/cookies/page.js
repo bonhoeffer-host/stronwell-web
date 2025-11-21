@@ -78,7 +78,7 @@ function CookiesPage() {
             {/* Breadcrumb */}
             <nav className="flex items-center justify-center space-x-2 text-sm text-gray-300 mb-8">
               <Link href="/" className="hover:text-[#ff4f01] transition-colors duration-200">
-                Home
+                {t('common.home')}
               </Link>
               <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
@@ -111,12 +111,10 @@ function CookiesPage() {
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-12"
             >
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
-                Understanding Cookies
+                {t('cookies.understandingCookies')}
               </h2>
               <p className="text-gray-300 leading-relaxed">
-                At Stronwell Machines, we use cookies and similar technologies to enhance your browsing experience, 
-                analyze website traffic, and provide personalized content. This Cookie Policy explains what cookies are, 
-                how we use them, and how you can control them.
+                {t('cookies.understandingIntro')}
               </p>
             </motion.div>
 
@@ -158,10 +156,10 @@ function CookiesPage() {
             <div className="relative p-12 rounded-3xl overflow-hidden">
               <div className="relative z-10">
                 <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                  Questions About Cookies?
+                  {t('cookies.questionsHeading')}
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Our team is here to help you understand how we use cookies and manage your preferences.
+                  {t('cookies.questionsText')}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -171,7 +169,7 @@ function CookiesPage() {
                       whileTap={{ scale: 0.95 }}
                       className="px-8 py-4 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] text-white font-bold text-lg rounded-xl shadow-2xl hover:shadow-[#ff4f01]/25 transition-all duration-300"
                     >
-                      Contact Support
+                      {t('cookies.contactSupport')}
                     </motion.button>
                   </Link>
                   
@@ -181,7 +179,7 @@ function CookiesPage() {
                       whileTap={{ scale: 0.95 }}
                       className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold text-lg rounded-xl hover:border-[#ff4f01] hover:bg-[#ff4f01]/10 transition-all duration-300"
                     >
-                      Privacy Policy
+                      {t('cookies.privacyPolicy')}
                     </motion.button>
                   </Link>
                 </div>

@@ -140,7 +140,7 @@ function TermsPage() {
             {/* Breadcrumb */}
             <nav className="flex items-center justify-center space-x-2 text-sm text-gray-300 mb-8">
               <Link href="/" className="hover:text-[#ff4f01] transition-colors duration-200">
-                Home
+                {t('common.home')}
               </Link>
               <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
@@ -226,10 +226,10 @@ function TermsPage() {
             <div className="relative p-12 rounded-3xl overflow-hidden">
               <div className="relative z-10">
                 <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                  Questions About Our Terms?
+                  {t('terms.questionsHeading')}
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Our legal team is available to clarify any questions you may have about these terms and conditions.
+                  {t('terms.questionsText')}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -239,7 +239,7 @@ function TermsPage() {
                       whileTap={{ scale: 0.95 }}
                       className="px-8 py-4 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] text-white font-bold text-lg rounded-xl shadow-2xl hover:shadow-[#ff4f01]/25 transition-all duration-300"
                     >
-                      Contact Legal Team
+                      {t('terms.contactLegalTeam')}
                     </motion.button>
                   </Link>
                   
@@ -249,7 +249,7 @@ function TermsPage() {
                       whileTap={{ scale: 0.95 }}
                       className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold text-lg rounded-xl hover:border-[#ff4f01] hover:bg-[#ff4f01]/10 transition-all duration-300"
                     >
-                      Privacy Policy
+                      {t('terms.privacyPolicy')}
                     </motion.button>
                   </Link>
                 </div>
@@ -273,11 +273,10 @@ function TermsPage() {
               <svg className="w-6 h-6 text-[#ff4f01] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
               </svg>
-              <h4 className="text-lg font-semibold text-white">Important Notice</h4>
+              <h4 className="text-lg font-semibold text-white">{t('terms.importantNotice')}</h4>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              These terms and conditions constitute the entire agreement between you and Stronwell Machines. 
-              By continuing to use our services, you acknowledge that you have read, understood, and agree to be bound by these terms.
+              {t('terms.importantNoticeText')}
             </p>
           </motion.div>
         </div>
