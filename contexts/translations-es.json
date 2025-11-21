@@ -18,7 +18,9 @@
   },
   "products": {
     "title": "Nuestros Productos",
+    "subtitle": "Soluciones de Equipos Profesionales para Cada Necesidad",
     "description": "Descubra nuestro amplio rango de equipos y herramientas de grado profesional",
+    "allCategories": "Todas las Categorías",
     "viewDetails": "Ver Detalles",
     "searchPlaceholder": "Buscar productos...",
     "noResults": "No se encontraron productos",
@@ -87,7 +89,44 @@
     "globalNetwork": "Red Global",
     "networkDesc": "Amplia red de distribuidores en América Latina",
     "getInTouch": "Póngase en Contacto",
-    "contactDesc": "¿Tiene preguntas? Nuestro equipo está aquí para ayudarlo a encontrar las soluciones adecuadas para su negocio."
+    "contactDesc": "¿Tiene preguntas? Nuestro equipo está aquí para ayudarlo a encontrar las soluciones adecuadas para su negocio.",
+    "ourPresence": "Nuestra Presencia Global",
+    "contactUs": "Contáctenos",
+    "scrollToExplore": "Deslice para Explorar",
+    "whereWeComeFrom": {
+      "title": "De Dónde Venimos",
+      "para1": "Stronwell fue fundada con una misión clara: cerrar la brecha entre calidad premium y asequibilidad en los mercados de equipos profesionales.",
+      "para2": "Reconociendo los desafíos que enfrentan los distribuidores latinoamericanos—atrapados entre marcas premium caras e importaciones de baja calidad no confiables—nos propusimos crear una mejor alternativa.",
+      "para3": "Hoy, servimos a cientos de socios en múltiples países, proporcionándoles rendimiento confiable, márgenes sólidos y el apoyo que necesitan para escalar sus negocios."
+    },
+    "whatWeBelieve": {
+      "title": "En Qué Creemos",
+      "belief1": {
+        "title": "Calidad Sin Compromisos",
+        "description": "Cada producto que ofrecemos cumple con rigurosos estándares internacionales, garantizando confiabilidad y rendimiento en los que sus clientes pueden confiar."
+      },
+      "belief2": {
+        "title": "Precios Justos y Transparentes",
+        "description": "Creemos en asociaciones sostenibles construidas sobre márgenes saludables que permiten a nuestros distribuidores desarrollar negocios rentables."
+      },
+      "belief3": {
+        "title": "Asociaciones a Largo Plazo",
+        "description": "No somos solo proveedores—somos socios comprometidos e invertidos en su éxito a través de apoyo integral y crecimiento compartido."
+      },
+      "belief4": {
+        "title": "Innovación Impulsada por el Mercado",
+        "description": "Adaptamos continuamente nuestras ofertas basándonos en comentarios reales de nuestra red de distribuidores y usuarios finales en mercados locales."
+      }
+    },
+    "globalPresence": {
+      "title": "Nuestra Presencia Global",
+      "subtitle": "Sirviendo Mercados en Todo el Mundo",
+      "location1": "América Latina",
+      "location2": "Asia Pacífico",
+      "location3": "Medio Oriente",
+      "para1": "Con una red creciente de distribuidores de confianza, Stronwell sirve mercados de equipos profesionales en múltiples continentes.",
+      "para2": "Nuestro compromiso con las asociaciones locales garantiza que las empresas tengan acceso a productos de calidad respaldados por soporte confiable, sin importar dónde operen."
+    }
   },
   "contact": {
     "title": "Contáctenos",
@@ -118,11 +157,25 @@
     "countryPlaceholder": "México",
     "companyPlaceholder": "Su Empresa S.A.",
     "requirementPlaceholder": "Consulta de producto, Asociación, Soporte técnico...",
-    "messagePlaceholder": "Cuéntenos más sobre sus requisitos..."
+    "messagePlaceholder": "Cuéntenos más sobre sus requisitos...",
+    "support247": "Soporte 24/7",
+    "responseTime": "Tiempo de Respuesta < 24h",
+    "countriesServed": "Países Atendidos",
+    "satisfactionRate": "Tasa de Satisfacción",
+    "getInTouch": "Póngase en Contacto",
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook",
+    "fullNamePlaceholder": "Ingrese su nombre completo",
+    "phoneNumberPlaceholder": "Ingrese su número de teléfono",
+    "selectRequirement": "Seleccione su requisito",
+    "requirementOptions": ["Comprador", "Distribuidor", "Consulta General"],
+    "successTitle": "¡Mensaje Enviado Exitosamente!",
+    "close": "Cerrar"
   },
   "partnerEdge": {
     "title": "Programa Partner Edge",
     "subtitle": "Únase a Nuestra Red Global",
+    "subtitle2": "Soluciones Reales para Desafíos Reales del Importador",
     "description": "Soluciones Reales para Desafíos Reales del Importador",
     "fullDescription": "Stronwell ayuda a los distribuidores latinoamericanos a liberarse de marcas premium caras e importaciones de baja calidad no confiables, ofreciendo rendimiento confiable, márgenes sólidos y crecimiento escalable.",
     "whyPartner": "Por Qué Asociarse con Nosotros",
@@ -138,15 +191,87 @@
     "benefit5Desc": "Logística eficiente y gestión de inventario",
     "benefit6": "Soporte Dedicado",
     "benefit6Desc": "Soporte de socios 24/7 y gestión de cuentas",
-    "howItWorks": "Cómo Funciona",
-    "step1": "Solicitar",
-    "step1Desc": "Envíe su solicitud de asociación",
-    "step2": "Revisar",
-    "step2Desc": "Nuestro equipo evalúa su solicitud",
-    "step3": "Integrar",
-    "step3Desc": "Complete la capacitación y configuración",
-    "step4": "Crecer",
-    "step4Desc": "Comience a vender y expanda su negocio",
+    "ourSolutions": "Nuestras Soluciones",
+    "contactUs": "Contáctenos",
+    "scrollToExplore": "Deslice para Explorar",
+    "challenges": {
+      "title": "Desafíos Comunes del Importador que Resolvemos",
+      "challenge1": {
+        "title": "Precios de Marcas Premium",
+        "description": "Las marcas premium con precios elevados reducen sus márgenes y dificultan competir en mercados sensibles al precio."
+      },
+      "challenge2": {
+        "title": "Importaciones Baratas No Confiables",
+        "description": "Los productos de baja calidad dañan su reputación y generan costosas reclamaciones de garantía y quejas de clientes."
+      },
+      "challenge3": {
+        "title": "Rango de Productos Limitado",
+        "description": "Las carteras de productos limitadas restringen su capacidad para atender diversas necesidades de clientes y aumentar la cuota de mercado."
+      },
+      "challenge4": {
+        "title": "Suministro Inconsistente",
+        "description": "La disponibilidad de stock impredecible y los tiempos de entrega hacen que la planificación de inventario sea casi imposible."
+      },
+      "challenge5": {
+        "title": "Soporte Técnico Débil",
+        "description": "El soporte postventa inadecuado deja a su equipo luchando para ayudar a los clientes con problemas técnicos."
+      },
+      "challenge6": {
+        "title": "Sin Materiales de Marketing",
+        "description": "La falta de activos de marketing profesionales dificulta promover productos y generar clientes potenciales de manera efectiva."
+      },
+      "challenge7": {
+        "title": "Proceso de Importación Complejo",
+        "description": "Los procedimientos y documentación aduanera complicados crean demoras y aumentan los costos operativos."
+      },
+      "challenge8": {
+        "title": "Fluctuaciones Cambiarias",
+        "description": "La volatilidad del tipo de cambio erosiona los márgenes y hace que la planificación financiera sea incierta para su negocio."
+      },
+      "challenge9": {
+        "title": "Cantidades Mínimas de Pedido",
+        "description": "Los MOQ altos atan capital y espacio de almacén, limitando la flexibilidad para probar nuevos productos o mercados."
+      },
+      "challenge10": {
+        "title": "Competencia del E-commerce",
+        "description": "Los minoristas en línea que venden directamente a los consumidores amenazan las ventajas de su canal de distribución tradicional."
+      },
+      "challenge11": {
+        "title": "Capacitación y Educación",
+        "description": "La capacitación insuficiente de productos para su equipo de ventas resulta en oportunidades perdidas y malas experiencias del cliente."
+      },
+      "challenge12": {
+        "title": "Términos de Pago",
+        "description": "Las condiciones de pago rígidas tensan el flujo de efectivo y dificultan la gestión efectiva del capital de trabajo."
+      }
+    },
+    "howItWorks": {
+      "title": "Cómo Funciona Partner Edge",
+      "step1": {
+        "title": "Envíe Su Solicitud",
+        "description": "Complete nuestro formulario de asociación con detalles sobre su negocio, mercado y capacidades de distribución."
+      },
+      "step2": {
+        "title": "Revisión de Solicitud",
+        "description": "Nuestro equipo de asociaciones evalúa su solicitud y analiza la adecuación del mercado dentro de 48-72 horas."
+      },
+      "step3": {
+        "title": "Acuerdo de Asociación",
+        "description": "Discutimos los términos, derechos territoriales, estructura de precios y finalizamos el contrato de asociación juntos."
+      },
+      "step4": {
+        "title": "Incorporación y Capacitación",
+        "description": "Acceda a capacitación integral de productos, materiales de marketing y recursos técnicos para comenzar."
+      },
+      "step5": {
+        "title": "Lanzamiento y Crecimiento",
+        "description": "Comience a vender con el apoyo completo de nuestro equipo—la asistencia continua le ayuda a escalar su negocio."
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Transformar Su Negocio de Distribución?",
+      "subtitle": "Únase a socios exitosos que ya han cambiado a márgenes confiables y crecimiento sostenible."
+    },
     "requirements": "Requisitos de Asociación",
     "req1": "Negocio establecido con experiencia relevante",
     "req2": "Fuerte presencia y red en el mercado local",
@@ -158,18 +283,31 @@
     "learnMore": "Más Información"
   },
   "dealer": {
-    "title": "Conviértase en Distribuidor",
-    "description": "Únase a nuestra red de distribuidores",
+    "title": "Conviértete en Distribuidor",
+    "subtitle": "Únete a nuestra creciente red de distribuidores y haz crecer tu negocio con Stronwell",
+    "description": "Únete a nuestra red de distribuidores",
     "companyName": "Nombre de la Empresa",
+    "companyNamePlaceholder": "Nombre de Tu Empresa",
+    "email": "Correo Electrónico",
+    "emailPlaceholder": "empresa@ejemplo.com",
     "contactNumber": "Número de Contacto",
+    "contactNumberPlaceholder": "+52 (555) 123-4567",
+    "currentBrands": "Marcas Actuales",
+    "currentBrandsPlaceholder": "Marcas que representas actualmente",
     "city": "Ciudad",
+    "cityPlaceholder": "Tu Ciudad",
     "country": "País",
+    "countryPlaceholder": "Tu País",
     "consent": "Acepto los términos y condiciones",
     "submit": "Enviar Solicitud",
-    "submitting": "Enviando..."
+    "submitApplication": "Enviar Solicitud",
+    "submitting": "Enviando...",
+    "successTitle": "¡Gracias por Tu Solicitud!",
+    "successMessage": "Hemos recibido tu solicitud de distribuidor y la revisaremos dentro de 48 horas. Nuestro equipo de asociaciones se pondrá en contacto contigo pronto para discutir los próximos pasos."
   },
   "cookies": {
     "title": "Política de Cookies",
+    "subtitle": "Cómo Utilizamos las Cookies en Nuestro Sitio Web",
     "lastUpdated": "Última Actualización: 21 de Noviembre de 2025",
     "intro": "Esta Política de Cookies explica cómo Stronwell utiliza cookies y tecnologías similares para reconocerlo cuando visita nuestro sitio web.",
     "whatAreCookies": "¿Qué Son las Cookies?",
@@ -181,6 +319,7 @@
   },
   "privacy": {
     "title": "Política de Privacidad",
+    "subtitle": "Su Privacidad es Importante para Nosotros",
     "lastUpdated": "Última Actualización: 21 de Noviembre de 2025",
     "intro": "En Stronwell, tomamos su privacidad en serio. Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos su información.",
     "infoWeCollect": "Información que Recopilamos",
@@ -199,6 +338,7 @@
   },
   "terms": {
     "title": "Términos y Condiciones",
+    "subtitle": "Por Favor Lea Estos Términos Cuidadosamente",
     "lastUpdated": "Última Actualización: 21 de Noviembre de 2025",
     "intro": "Por favor lea estos términos y condiciones cuidadosamente antes de usar nuestro sitio web y servicios.",
     "acceptance": "Aceptación de Términos",

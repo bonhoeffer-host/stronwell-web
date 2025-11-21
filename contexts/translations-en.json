@@ -18,7 +18,9 @@
   },
   "products": {
     "title": "Our Products",
+    "subtitle": "Professional Equipment Solutions for Every Need",
     "description": "Discover our comprehensive range of professional-grade equipment and tools",
+    "allCategories": "All Categories",
     "viewDetails": "View Details",
     "searchPlaceholder": "Search products...",
     "noResults": "No products found",
@@ -87,7 +89,44 @@
     "globalNetwork": "Global Network",
     "networkDesc": "Extensive dealer network across Latin America",
     "getInTouch": "Get In Touch",
-    "contactDesc": "Have questions? Our team is here to help you find the right solutions for your business."
+    "contactDesc": "Have questions? Our team is here to help you find the right solutions for your business.",
+    "ourPresence": "Our Global Presence",
+    "contactUs": "Contact Us",
+    "scrollToExplore": "Scroll to Explore",
+    "whereWeComeFrom": {
+      "title": "Where We Come From",
+      "para1": "Stronwell was founded with a clear mission: to bridge the gap between premium quality and affordability in professional equipment markets.",
+      "para2": "Recognizing the challenges faced by Latin American distributors—caught between overpriced premium brands and unreliable low-end imports—we set out to create a better alternative.",
+      "para3": "Today, we serve hundreds of partners across multiple countries, providing them with trusted performance, solid margins, and the support they need to scale their businesses."
+    },
+    "whatWeBelieve": {
+      "title": "What We Believe",
+      "belief1": {
+        "title": "Quality Without Compromise",
+        "description": "Every product we offer meets rigorous international standards, ensuring reliability and performance that your customers can trust."
+      },
+      "belief2": {
+        "title": "Fair & Transparent Pricing",
+        "description": "We believe in sustainable partnerships built on healthy margins that allow our dealers to grow profitable businesses."
+      },
+      "belief3": {
+        "title": "Long-Term Partnerships",
+        "description": "We're not just suppliers—we're committed partners invested in your success through comprehensive support and shared growth."
+      },
+      "belief4": {
+        "title": "Market-Driven Innovation",
+        "description": "We continuously adapt our offerings based on real feedback from our dealer network and end-users in local markets."
+      }
+    },
+    "globalPresence": {
+      "title": "Our Global Presence",
+      "subtitle": "Serving Markets Worldwide",
+      "location1": "Latin America",
+      "location2": "Asia Pacific",
+      "location3": "Middle East",
+      "para1": "With a growing network of trusted dealers and distributors, Stronwell serves professional equipment markets across multiple continents.",
+      "para2": "Our commitment to local partnerships ensures that businesses have access to quality products backed by reliable support, no matter where they operate."
+    }
   },
   "contact": {
     "title": "Contact Us",
@@ -118,11 +157,25 @@
     "countryPlaceholder": "United States",
     "companyPlaceholder": "Your Company Ltd.",
     "requirementPlaceholder": "Product inquiry, Partnership, Technical support...",
-    "messagePlaceholder": "Tell us more about your requirements..."
+    "messagePlaceholder": "Tell us more about your requirements...",
+    "support247": "24/7 Support",
+    "responseTime": "< 24h Response Time",
+    "countriesServed": "Countries Served",
+    "satisfactionRate": "Satisfaction Rate",
+    "getInTouch": "Get In Touch",
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook",
+    "fullNamePlaceholder": "Enter your full name",
+    "phoneNumberPlaceholder": "Enter your phone number",
+    "selectRequirement": "Select your requirement",
+    "requirementOptions": ["Buyer", "Dealer", "General Enquiry"],
+    "successTitle": "Message Sent Successfully!",
+    "close": "Close"
   },
   "partnerEdge": {
     "title": "Partner Edge Program",
     "subtitle": "Join Our Global Network",
+    "subtitle2": "Real Solutions for Real Importer Challenges",
     "description": "Real Solutions for Real Importer Challenges",
     "fullDescription": "Stronwell helps Latin American distributors break free from overpriced premium brands and unreliable low-end imports—offering trusted performance, solid margins, and scalable growth.",
     "whyPartner": "Why Partner With Us",
@@ -138,15 +191,87 @@
     "benefit5Desc": "Efficient logistics and inventory management",
     "benefit6": "Dedicated Support",
     "benefit6Desc": "24/7 partner support and account management",
-    "howItWorks": "How It Works",
-    "step1": "Apply",
-    "step1Desc": "Submit your partnership application",
-    "step2": "Review",
-    "step2Desc": "Our team evaluates your application",
-    "step3": "Onboard",
-    "step3Desc": "Complete training and setup",
-    "step4": "Grow",
-    "step4Desc": "Start selling and expand your business",
+    "ourSolutions": "Our Solutions",
+    "contactUs": "Contact Us",
+    "scrollToExplore": "Scroll to Explore",
+    "challenges": {
+      "title": "Common Importer Challenges We Solve",
+      "challenge1": {
+        "title": "Premium Brand Pricing",
+        "description": "Overpriced premium brands squeeze your margins and make it difficult to compete in price-sensitive markets."
+      },
+      "challenge2": {
+        "title": "Unreliable Cheap Imports",
+        "description": "Low-quality products damage your reputation and lead to costly warranty claims and customer complaints."
+      },
+      "challenge3": {
+        "title": "Limited Product Range",
+        "description": "Narrow product portfolios restrict your ability to serve diverse customer needs and grow market share."
+      },
+      "challenge4": {
+        "title": "Inconsistent Supply",
+        "description": "Unpredictable stock availability and delivery times make inventory planning nearly impossible."
+      },
+      "challenge5": {
+        "title": "Weak Technical Support",
+        "description": "Inadequate after-sales support leaves your team struggling to help customers with technical issues."
+      },
+      "challenge6": {
+        "title": "No Marketing Materials",
+        "description": "Lack of professional marketing assets makes it harder to promote products and generate leads effectively."
+      },
+      "challenge7": {
+        "title": "Complex Import Process",
+        "description": "Complicated customs procedures and documentation create delays and increase operational overhead."
+      },
+      "challenge8": {
+        "title": "Currency Fluctuations",
+        "description": "Exchange rate volatility erodes margins and makes financial planning uncertain for your business."
+      },
+      "challenge9": {
+        "title": "Minimum Order Quantities",
+        "description": "High MOQs tie up capital and warehouse space, limiting flexibility to test new products or markets."
+      },
+      "challenge10": {
+        "title": "Competition from E-commerce",
+        "description": "Online retailers selling direct to consumers threaten your traditional distribution channel advantages."
+      },
+      "challenge11": {
+        "title": "Training & Education",
+        "description": "Insufficient product training for your sales team results in missed opportunities and poor customer experiences."
+      },
+      "challenge12": {
+        "title": "Payment Terms",
+        "description": "Rigid payment conditions strain cash flow and make it difficult to manage working capital effectively."
+      }
+    },
+    "howItWorks": {
+      "title": "How Partner Edge Works",
+      "step1": {
+        "title": "Submit Your Application",
+        "description": "Fill out our partnership form with details about your business, market, and distribution capabilities."
+      },
+      "step2": {
+        "title": "Application Review",
+        "description": "Our partnership team evaluates your application and assesses market fit within 48-72 hours."
+      },
+      "step3": {
+        "title": "Partnership Agreement",
+        "description": "We discuss terms, territory rights, pricing structure, and finalize the partnership contract together."
+      },
+      "step4": {
+        "title": "Onboarding & Training",
+        "description": "Access comprehensive product training, marketing materials, and technical resources to get started."
+      },
+      "step5": {
+        "title": "Launch & Grow",
+        "description": "Begin selling with full support from our team—ongoing assistance helps you scale your business."
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Distribution Business?",
+      "subtitle": "Join successful partners who've already made the switch to reliable margins and sustainable growth."
+    },
     "requirements": "Partnership Requirements",
     "req1": "Established business with relevant experience",
     "req2": "Strong local market presence and network",
@@ -159,17 +284,30 @@
   },
   "dealer": {
     "title": "Become a Dealer",
+    "subtitle": "Join our growing network of dealers and grow your business with Stronwell",
     "description": "Join our dealer network",
     "companyName": "Company Name",
+    "companyNamePlaceholder": "Your Company Name",
+    "email": "Email Address",
+    "emailPlaceholder": "company@example.com",
     "contactNumber": "Contact Number",
+    "contactNumberPlaceholder": "+1 (555) 123-4567",
+    "currentBrands": "Current Brands",
+    "currentBrandsPlaceholder": "Brands you currently represent",
     "city": "City",
+    "cityPlaceholder": "Your City",
     "country": "Country",
+    "countryPlaceholder": "Your Country",
     "consent": "I agree to the terms and conditions",
     "submit": "Submit Application",
-    "submitting": "Submitting..."
+    "submitApplication": "Submit Application",
+    "submitting": "Submitting...",
+    "successTitle": "Thank You for Your Application!",
+    "successMessage": "We have received your dealer application and will review it within 48 hours. Our partnership team will contact you soon to discuss the next steps."
   },
   "cookies": {
     "title": "Cookie Policy",
+    "subtitle": "How We Use Cookies on Our Website",
     "lastUpdated": "Last Updated: November 21, 2025",
     "intro": "This Cookie Policy explains how Stronwell uses cookies and similar technologies to recognize you when you visit our website.",
     "whatAreCookies": "What Are Cookies?",
@@ -181,6 +319,7 @@
   },
   "privacy": {
     "title": "Privacy Policy",
+    "subtitle": "Your Privacy Matters to Us",
     "lastUpdated": "Last Updated: November 21, 2025",
     "intro": "At Stronwell, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information.",
     "infoWeCollect": "Information We Collect",
@@ -199,6 +338,7 @@
   },
   "terms": {
     "title": "Terms and Conditions",
+    "subtitle": "Please Read These Terms Carefully",
     "lastUpdated": "Last Updated: November 21, 2025",
     "intro": "Please read these terms and conditions carefully before using our website and services.",
     "acceptance": "Acceptance of Terms",

@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <BgLayout>
       <Hero/>
-      <House/>
-      <Products/>
       <About/>
+      <Products/>
+      <House/>
       <Faqs/>
     </BgLayout>
   );
