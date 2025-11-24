@@ -6,7 +6,7 @@ import { useTranslation } from '../../contexts/TranslationContext'
 
 function House() {
   const { t } = useTranslation()
-  
+
   const companies = [
     {
       id: 1,
@@ -57,8 +57,8 @@ function House() {
   }
 
   const cardVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       y: 50,
       scale: 0.9
     },
@@ -97,16 +97,16 @@ function House() {
   return (
     <section className="py-5 lg:py-10 px-6 lg:px-8 ">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-100 mb-6"
             style={{ fontFamily: 'var(--font-titillium-web)' }}
           >
@@ -115,7 +115,7 @@ function House() {
               {t('sections.house.gardenForestry').split(' & ')[1]}
             </span>
           </motion.h2>
-          
+
           <motion.div
             className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full"
             initial={{ width: 0 }}
@@ -126,7 +126,7 @@ function House() {
         </motion.div>
 
         {/* Companies Grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
           variants={containerVariants}
           initial="hidden"
@@ -141,15 +141,15 @@ function House() {
               className="group"
             >
               <div className="relative bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-white/30">
-                
+
                 {/* Card Header with Gradient */}
                 <div className="relative h-32 bg-white/10 overflow-hidden">
-                  
+
                   {/* Logo Container */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="h-20  rounded-xl  flex items-center justify-center">
-                      <img 
-                        src={company.logo} 
+                      <img
+                        src={company.logo}
                         alt={`${company.name} logo`}
                         className="h-32 p-4 object-contain"
                       />
@@ -159,24 +159,24 @@ function House() {
 
                 {/* Card Content */}
                 <div className="p-6">
-                  
+
                   {/* Company Name */}
-                  <motion.h3 
-                    className="text-xl lg:text-2xl text-center font-bold text-gray-100 mb-4"
+                  <motion.h3
+                    className="text-xl lg:text-2xl text-center text-gray-100 mb-4"
                   >
                     {company.tagline}
                   </motion.h3>
-                  
+
                   {/* Description Badge */}
                   {/* <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-[#ff4f01] text-sm font-medium mb-4">
                     {company.description}
                   </div> */}
-                  
+
                   {/* Tagline */}
                   {/* <p className="text-gray-100 text-sm mb-6 leading-relaxed">
                     {company.tagline}
                   </p> */}
-                  
+
                   {/* Visit Website Button */}
                   <Link href={company.website} target="_blank" rel="noopener noreferrer">
                     <motion.button
@@ -206,14 +206,14 @@ function House() {
           ))}
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="text-center my-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-100 mb-6"
             style={{ fontFamily: 'var(--font-titillium-web)' }}
           >
@@ -222,7 +222,7 @@ function House() {
               {t('sections.house.hardwareDivision').split(' ')[1]}
             </span>
           </motion.h2>
-          
+
           <motion.div
             className="w-24 h-1 bg-gradient-to-r from-[#ff4f01] to-[#ff6b2e] mx-auto rounded-full"
             initial={{ width: 0 }}
@@ -233,7 +233,7 @@ function House() {
         </motion.div>
 
         {/* Companies Grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 gap-8 lg:gap-10"
           variants={containerVariants}
           initial="hidden"
@@ -248,15 +248,15 @@ function House() {
               className="group w-full md:w-[50%] lg:w-[33%] mx-auto"
             >
               <div className="relative bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-white/30">
-                
+
                 {/* Card Header with Gradient */}
                 <div className="relative h-32 bg-white/10 overflow-hidden">
-                  
+
                   {/* Logo Container */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="h-20  rounded-xl  flex items-center justify-center">
-                      <img 
-                        src={company.logo} 
+                      <img
+                        src={company.logo}
                         alt={`${company.name} logo`}
                         className="h-32 p-4 object-contain"
                       />
@@ -266,24 +266,24 @@ function House() {
 
                 {/* Card Content */}
                 <div className="p-6">
-                  
+
                   {/* Company Name */}
-                  <motion.h3 
-                    className="text-xl lg:text-2xl text-center font-bold text-gray-100 mb-4"
+                  <motion.h3
+                    className="text-xl lg:text-2xl text-center text-gray-100 mb-4"
                   >
                     {company.tagline}
                   </motion.h3>
-                  
+
                   {/* Description Badge */}
                   {/* <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-[#ff4f01] text-sm font-medium mb-4">
                     {company.description}
                   </div> */}
-                  
+
                   {/* Tagline */}
                   {/* <p className="text-gray-100 text-sm mb-6 leading-relaxed">
                     {company.tagline}
                   </p> */}
-                  
+
                   {/* Visit Website Button */}
                   <Link href={company.website} target="_blank" rel="noopener noreferrer">
                     <motion.button

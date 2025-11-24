@@ -336,7 +336,7 @@ function Footer() {
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: 1, duration: 0.4 }}
               >
-                {t('footer.copyright', { year: new Date().getFullYear() })}
+                © {new Date().getFullYear()} {t('footer.copyright')}
               </motion.p>
 
               <div className="hidden md:block"/>
