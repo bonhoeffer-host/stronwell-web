@@ -1483,7 +1483,7 @@
   },
   {
     "category": "electric-motors",
-    "product": "ELECTRIC MOTOR",
+    "product": "electric-motors",
     "image": ["SEE1.0HC-DS60.webp", "SEE2.0HC-DS60.webp", "SEE3.0HC-DS60.webp", "SEE4.0HC-DS60.webp", "SEE1.0LC-DS60.webp", "SEE2.0LC-DS60.webp", "SEE3.0LC-DS60.webp", "SEE4.0LC-DS60.webp"],
     "sharedDescription": [
       "Low vibration - More user comfort",
