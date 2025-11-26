@@ -99,6 +99,16 @@
         "link": "/products/garden-tools"
       }
     ],
+    
+    "electric-motors": [
+      {
+        "id": 1,
+        "title": "Electric Motors",
+        "image": "/product-banner/electric-motor.png",
+        "category": "electric-motors",
+        "link": "/products/electric-motors"
+      }
+    ],
     "marine": [
       {
         "id": 1,
