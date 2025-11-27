@@ -1402,6 +1402,11 @@
         "electricMotorPower": "2.7 to 4 HP",
         "maxPressure": "45 kgf/cm²",
         "structure": "Cast iron housing, triplex pump"
+      },
+      {
+        "model": "SMD43BC",
+        "Motor": "2 tiempos, gasolina, 43cc, 1,7CV",
+        "Alcance Costero Hasta": "15 metros",
       }
     ]
   },
