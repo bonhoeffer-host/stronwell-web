@@ -1336,6 +1336,43 @@
         "Sistema de Arranque": "Retractil",
         "Capacidad Deposito Aceite": "600 ml"
       }
+      ,
+       {
+        "model": "SG3.0CS1-50",
+        "Potencia Maxima": "3,0 KW",
+        "Potencia Nominal": "2,8 KW",
+        "Bobina del Estator": "100% Cobre",
+        "Voltaje": "220V - 50Hz",
+        "Motor": "7 HP / OHV, Gasolina, 4 Tiempos",
+        "Autonomia al 50% de carga": "11,5 Hora",
+        "Capacidad Tanque Combustible": "15 Litros",
+        "Sistema de Arranque": "Retractil",
+        "Capacidad Deposito Aceite": "600 ml"
+      },
+      {
+        "model": "SG6.0CSD-60",
+        "Potencia Maxima": "6,0 KW",
+        "Potencia Nominal": "5,5 KW",
+        "Bobina del Estator": "100% Cobre",
+        "Voltaje": "110V/220V Doble voltaje - 60Hz",
+        "Motor": "13 HP / OHV, Gasolina, 4 Tiempos",
+        "Autonomia al 50% de carga": "8,0 Hora",
+        "Capacidad Tanque Combustible": "25 Litros",
+        "Sistema de Arranque": "Retractil",
+        "Capacidad Deposito Aceite": "1,1 litro"
+      },
+      {
+        "model": "SG5.5CSD-50",
+        "Potencia Maxima": "5,5 KW",
+        "Potencia Nominal": "5,0 KW",
+        "Bobina del Estator": "100% Cobre",
+        "Voltaje": "110V/220V Doble voltaje - 50Hz",
+        "Motor": "13 HP / OHV, Gasolina, 4 Tiempos",
+        "Autonomia al 50% de carga": "8,0 Hora",
+        "Capacidad Tanque Combustible": "25 Litros",
+        "Sistema de Arranque": "Retractil",
+        "Capacidad Deposito Aceite": "1,1 litro"
+      }
     ]
   },
   {
