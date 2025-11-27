@@ -1323,6 +1323,18 @@
         "fuelCapacity": "12.5 Liters",
         "startSystem": "Recoil",
         "oilCapacity": "1.65 Liters"
+      },
+      {
+        "model": "SG3.0CSD-50",
+        "Potencia Maxima": "3,0 KW",
+        "Potencia Nominal": "2,8 KW",
+        "Bobina del Estator": "100% Cobre",
+        "Voltaje": "110V/220V Doble voltaje - 50Hz",
+        "Motor": "7 HP / OHV, Gasolina, 4 Tiempos",
+        "Autonomia al 50% de carga": "11,5 Hora",
+        "Capacidad Tanque Combustible": "15 Litros",
+        "Sistema de Arranque": "Retractil",
+        "Capacidad Deposito Aceite": "600 ml"
       }
     ]
   },
