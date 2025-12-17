@@ -146,9 +146,9 @@ function Header() {
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                 <img 
-                    src="/logo.png" 
+                    src="/white-logo.png" 
                     alt="Stronwell Logo" 
-                    className="h-3 [@media(min-width:420px)]:h-5 shadow-lg"
+                    className="h-4 [@media(min-width:420px)]:h-8 shadow-lg"
                 />
                 {/* <motion.div
                     className="absolute -inset-1 bg-gradient-to-br from-[#ff4f01] to-[#ff6b2e] rounded-xl opacity-30 blur-sm"
