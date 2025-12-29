@@ -149,8 +149,8 @@ function Header() {
                 >
               <img   src="/logo.png" 
                 alt="Stronwell Logo" 
-                className=" h-6          
-                  sm:h-7           /* small screens */
+                className=" h-5         
+                  sm:h-5           /* small screens */
                   md:h-7           /* desktop */
                   w-auto
                   shadow-lg
