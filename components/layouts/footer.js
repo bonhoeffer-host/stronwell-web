@@ -159,9 +159,9 @@ function Footer() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <img 
-                    src="/white-logo.png" 
+                    src="/logo.png" 
                     alt="Stronwell Logo" 
-                    className="h-8 shadow-lg"
+                    className="h-7 shadow-lg"
                   />
                   {/* <span className="text-2xl font-bold text-white">
                     Stronwell
