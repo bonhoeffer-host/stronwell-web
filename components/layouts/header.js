@@ -146,7 +146,7 @@ function Header() {
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                 <img 
-                    src="/white-logo.png" 
+                    src="/logo.png" 
                     alt="Stronwell Logo" 
                     className="h-4 [@media(min-width:420px)]:h-8 shadow-lg"
                 />
