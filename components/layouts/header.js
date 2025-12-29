@@ -1,4 +1,6 @@
-"use client"
+
+"use client";
+
 import { motion, AnimatePresence } from 'framer-motion'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
