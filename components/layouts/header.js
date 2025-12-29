@@ -149,7 +149,7 @@ function Header() {
                 alt="Stronwell Logo" 
                 className=" h-6          
                   sm:h-7           /* small screens */
-                  md:h-8           /* desktop */
+                  md:h-7           /* desktop */
                   w-auto
                   shadow-lg
                 "
