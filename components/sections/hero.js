@@ -12,25 +12,25 @@ function Hero() {
   const banners = [
     {
       id: 1,
-      image: '/banners/b1.jpeg',
+      image: '/banners/grass-banner.jpg',
       title: t('sections.hero.slide1Title'),
       subtitle: t('sections.hero.slide1Subtitle')
     },
     {
       id: 2,
-      image: '/banners/b4.jpeg',
+      image: '/banners/hero-banner.png',
       title: t('sections.hero.slide2Title'),
       subtitle: t('sections.hero.slide2Subtitle')
     },
     {
      id: 3,
-      image: '/banners/b3.jpeg',
+      image: '/banners/home-banner-small.png',
       title: t('sections.hero.slide2Title'),
       subtitle: t('sections.hero.slide2Subtitle')
     },
     {
      id: 4,
-      image: '/banners/b2.jpeg',
+      image: '/banners/home-banner.png',
       title: t('sections.hero.slide2Title'),
       subtitle: t('sections.hero.slide2Subtitle')
     }
